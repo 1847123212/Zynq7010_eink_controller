@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/iLA/iLA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="17fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="324"></NameColumnWidth>
+      <ValueColumnWidth column_width="88"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="3" />
+   <wave_markers>
+      <marker time="4500" label="" />
+   </wave_markers>
+   <wvobject fp_name="CNT_XSTL" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">CNT_XSTL[11:0]</obj_property>
+      <obj_property name="ObjectShortName">CNT_XSTL[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="CNT_SKV" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">CNT_SKV[11:0]</obj_property>
+      <obj_property name="ObjectShortName">CNT_SKV[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="CNT_XLE" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">CNT_XLE[11:0]</obj_property>
+      <obj_property name="ObjectShortName">CNT_XLE[11:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>
