@@ -9,39 +9,59 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="17fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomStartTime time="74845fs"></ZoomStartTime>
+      <ZoomEndTime time="83731fs"></ZoomEndTime>
+      <Cursor1Time time="77845fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="324"></NameColumnWidth>
+      <NameColumnWidth column_width="177"></NameColumnWidth>
       <ValueColumnWidth column_width="88"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
+   <WVObjectSize size="6" />
    <wave_markers>
-      <marker time="4500" label="" />
+      <marker time="80845" label="" />
    </wave_markers>
-   <wvobject fp_name="CNT_XSTL" type="array">
+   <wvobject fp_name="XCL_IBUF" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">CNT_XSTL[11:0]</obj_property>
-      <obj_property name="ObjectShortName">CNT_XSTL[11:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">XCL_IBUF</obj_property>
+      <obj_property name="ObjectShortName">XCL_IBUF</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="CNT_SKV" type="array">
+   <wvobject fp_name="XLE_IBUF" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">CNT_SKV[11:0]</obj_property>
-      <obj_property name="ObjectShortName">CNT_SKV[11:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">XLE_IBUF</obj_property>
+      <obj_property name="ObjectShortName">XLE_IBUF</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="CNT_XLE" type="array">
+   <wvobject fp_name="XSTL_IBUF" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">CNT_XLE[11:0]</obj_property>
-      <obj_property name="ObjectShortName">CNT_XLE[11:0]</obj_property>
+      <obj_property name="ElementShortName">XSTL_IBUF</obj_property>
+      <obj_property name="ObjectShortName">XSTL_IBUF</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SKV_IBUF" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">SKV_IBUF</obj_property>
+      <obj_property name="ObjectShortName">SKV_IBUF</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="SPV_IBUF" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">SPV_IBUF</obj_property>
+      <obj_property name="ObjectShortName">SPV_IBUF</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="EINK_DATA_IBUF" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">EINK_DATA_IBUF[7:0]</obj_property>
+      <obj_property name="ObjectShortName">EINK_DATA_IBUF[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
