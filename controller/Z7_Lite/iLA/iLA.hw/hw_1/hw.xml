@@ -24,6 +24,7 @@
     </Object>
     <Object name="Controller_Logic" gui_info="">
       <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CONTROL.TRIGGER_POSITION" value="4500"/>
       <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
     </Object>
     <Object name="your_instance_name" gui_info="">
