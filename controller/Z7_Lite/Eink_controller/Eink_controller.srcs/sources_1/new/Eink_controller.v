@@ -54,6 +54,19 @@ module Eink_controller(
     parameter EINK_Freq = 85;  // TFT标称刷新率
 
     ///////////////////////////////////
+    //--------CLK_controller---------//
+    ///////////////////////////////////
+
+    clock_divider #(
+        .IN_CLK(50),
+        .OUT_CLK(25000)
+    ) CLK_25M (
+        .rst_n   (rst_n),
+        .clk_in  (clk),
+        .clk_out (clk_25m)
+    );
+
+    ///////////////////////////////////
     //-------Frame_controller--------//
     ///////////////////////////////////
 
@@ -63,7 +76,7 @@ module Eink_controller(
     level2pulse #(
             .MODE("FALLING")
         ) controller_pulse (
-            .clk(clk), 
+            .clk(clk_25m), 
             .in(key), 
             .out(S_Frame)
         );
@@ -73,7 +86,7 @@ module Eink_controller(
             .High(825)
         ) Eink_frame (
             .rst_n   (rst_n),
-            .clk     (clk),
+            .clk_25m (clk_25m),
             .S_Frame (S_Frame),
             .SKV     (SKV),
             .SPV     (SPV),
@@ -82,6 +95,20 @@ module Eink_controller(
             .XSTL    (XSTL),
             .E_Frame (E_Frame)
         );
+
+    ///////////////////////////////////
+    //-----Frame_controller_test-----//
+    ///////////////////////////////////
+
+    always @(posedge clk or negedge rst_n) begin
+        if (!rst_n) begin
+            // reset
+            
+        end
+        else if () begin
+            
+        end
+    end
 
     ///////////////////////////////////
     //-----------电源控制-------------//

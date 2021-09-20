@@ -4,7 +4,7 @@ module Frame_controller
       parameter High  = 825)   // 高
     (
     input wire rst_n,
-    input wire clk,
+    input wire clk_25m,
 
     input wire S_Frame,  // 帧开始
 
@@ -40,19 +40,7 @@ module Frame_controller
     //-------生成EINK主时钟XCL--------//
     ///////////////////////////////////
 
-    wire clk_25m;
-
     assign XCL = clk_25m;
-
-    clk_wiz_0 XCL_Driver(
-
-            .clk_25m(clk_25m),
-    
-            .resetn(rst_n),
-            .locked(locked),
-    
-            .clk(clk)
-        );
 
     ///////////////////////////////////
     //-------------SKV---------------//
