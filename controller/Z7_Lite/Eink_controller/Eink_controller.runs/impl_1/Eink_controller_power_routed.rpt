@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Sun Sep 19 19:35:40 2021
+| Date             : Mon Sep 20 10:56:33 2021
 | Host             : Duller running 64-bit major release  (build 9200)
 | Command          : report_power -file Eink_controller_power_routed.rpt -pb Eink_controller_power_summary_routed.pb -rpx Eink_controller_power_routed.rpx
 | Design           : Eink_controller
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.198        |
+| Total On-Chip Power (W)  | 0.152        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.101        |
-| Device Static (W)        | 0.097        |
+| Dynamic (W)              | 0.056        |
+| Device Static (W)        | 0.096        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 82.7         |
-| Junction Temperature (C) | 27.3         |
+| Max Ambient (C)          | 83.2         |
+| Junction Temperature (C) | 26.8         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     4859 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1519 |     17600 |            8.63 |
-|   Register               |    <0.001 |     2319 |     35200 |            6.59 |
-|   CARRY4                 |    <0.001 |       63 |      4400 |            1.43 |
-|   BUFG                   |    <0.001 |        5 |        32 |           15.63 |
-|   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
+| Slice Logic              |    <0.001 |     4936 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1546 |     17600 |            8.78 |
+|   Register               |    <0.001 |     2366 |     35200 |            6.72 |
+|   CARRY4                 |    <0.001 |       71 |      4400 |            1.61 |
 |   LUT as Shift Register  |    <0.001 |      105 |      6000 |            1.75 |
+|   BUFG                   |    <0.001 |        4 |        32 |           12.50 |
+|   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
 |   F7/F8 Muxes            |    <0.001 |       39 |     17600 |            0.22 |
 |   Others                 |     0.000 |      401 |       --- |             --- |
-| Signals                  |    <0.001 |     3823 |       --- |             --- |
+| Signals                  |     0.001 |     3887 |       --- |             --- |
 | Block RAM                |    <0.001 |       52 |        60 |           86.67 |
-| PLL                      |     0.098 |        2 |         2 |          100.00 |
-| I/O                      |    <0.001 |       42 |       100 |           42.00 |
-| Static Power             |     0.097 |          |           |                 |
-| Total                    |     0.198 |          |           |                 |
+| PLL                      |     0.049 |        1 |         2 |           50.00 |
+| I/O                      |     0.004 |       42 |       100 |           42.00 |
+| Static Power             |     0.096 |          |           |                 |
+| Total                    |     0.152 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,8 +78,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.008 |       0.003 |      0.005 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.059 |       0.054 |      0.005 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.033 |       0.027 |      0.005 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -153,10 +153,7 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| Eink_controller          |     0.101 |
-|   Eink_frame             |     0.049 |
-|     XCL_Driver           |     0.049 |
-|       inst               |     0.049 |
+| Eink_controller          |     0.056 |
 |   dbg_hub                |     0.001 |
 |     inst                 |     0.001 |
 |       BSCANID.u_xsdbm_id |     0.001 |

@@ -153,22 +153,30 @@
                 "parent_nets": [
                     {
                         "id": 2,
-                        "name": "Eink_frame/XCL_Driver/inst/clk_25m",
+                        "name": "CLK_25M/clk_out_reg_0_BUFG",
                         "state_reg": [
                             {
-                                "name": "Eink_frame/FSM_sequential_STATE_SKV_reg[0]",
+                                "name": "Eink_frame/FSM_onehot_STATE_XSTL_reg[0]",
                                 "states": [
                                     {
-                                        "name": "IDEL_SKV",
-                                        "val": "00"
+                                        "name": "IDEL_XSTL",
+                                        "val": "00001"
                                     },
                                     {
-                                        "name": "DONE_SKV",
-                                        "val": "10"
+                                        "name": "STATE1_XSTL",
+                                        "val": "00010"
                                     },
                                     {
-                                        "name": "STATE1_SKV",
-                                        "val": "01"
+                                        "name": "STATE2_XSTL",
+                                        "val": "00100"
+                                    },
+                                    {
+                                        "name": "DONE_XSTL",
+                                        "val": "10000"
+                                    },
+                                    {
+                                        "name": "STATE3_XSTL",
+                                        "val": "01000"
                                     }
                                 ]
                             }

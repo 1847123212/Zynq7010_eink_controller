@@ -8,13 +8,13 @@ module Frame_controller
 
     input wire S_Frame,  // 帧开始
 
+    output reg S_Data,   // 开始发送数据
+
     output reg SKV,      // 时钟脉冲源驱动
     output reg SPV,      // 启动脉冲门驱动器
     output wire XCL,     // 时钟脉冲源驱动
     output reg XLE,      // 锁存使能源驱动器
     output reg XSTL,     // 启动脉冲源驱动器
-
-    output reg S_Data,   // 开始发送数据
 
     output reg E_Frame   // 帧结束
     );
@@ -195,7 +195,7 @@ module Frame_controller
 
     localparam CNT_XSTL = 330 - 1;  // 拉低
 
-    localparam CNT_SKV_UP = 4 - 1;// 计数
+    localparam CNT_SKV_UP = 4 - 1;  // 计数
 
 
     reg [8:0]   cnt_xstl;
@@ -212,6 +212,7 @@ module Frame_controller
     always @(posedge clk_25m or negedge rst_n) begin
         if (!rst_n) begin
             // reset
+            S_Data <= 0;
             cnt_xstl <= 0;
             STATE_XSTL <= 0;
             cnt_xstl_high <= 0;
@@ -248,11 +249,13 @@ module Frame_controller
                     else begin
                         STATE_XSTL <= STATE3_XSTL;
                         cnt_xstl <= 0;
+                        S_Data <= 1;  // 数据开始标签
                     end
                 end
 
                 STATE3_XSTL:begin  
                     if (cnt_xstl < 2) begin  // 保持XSTL为低两个XCL周期
+                        S_Data <= 0;  // 标签清除
                         XSTL <= 0;
                         cnt_xstl <= cnt_xstl + 1;
                         STATE_XSTL <= STATE3_XSTL;
@@ -271,12 +274,14 @@ module Frame_controller
                 end
 
                 DONE_XSTL:begin
+                    S_Data <= 0;
                     cnt_xstl <= 0;
                     cnt_xstl_high <= 0;
                     STATE_XSTL <= IDEL_XSTL;
                 end
 
                 default:begin
+                    S_Data <= 0;
                     cnt_xstl <= 0;
                     cnt_xstl_high <= 0;
                     STATE_XSTL <= IDEL_XSTL;

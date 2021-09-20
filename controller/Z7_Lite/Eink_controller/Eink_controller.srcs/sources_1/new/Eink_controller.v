@@ -45,13 +45,16 @@ module Eink_controller(
     output wire XCL,  // 时钟脉冲源驱动
     output wire XLE,  // 锁存使能源驱动器
     output wire XSTL, // 启动脉冲源驱动器
-    output wire [7:0] EINK_DATA, // 数据
+    output reg [7:0] EINK_DATA, // 数据
 
     // LED
     output wire [15:0] LED     // 灯组
     );
     
     parameter EINK_Freq = 85;  // TFT标称刷新率
+
+    parameter Width = 1200;  // 宽
+    parameter High = 825;  // 高
 
     ///////////////////////////////////
     //--------CLK_controller---------//
@@ -72,6 +75,7 @@ module Eink_controller(
 
     wire S_Frame;
     wire E_Frame;
+    wire S_Data;
 
     level2pulse #(
             .MODE("FALLING")
@@ -82,12 +86,13 @@ module Eink_controller(
         );
 
     Frame_controller #(
-            .Width(1200),
-            .High(825)
+            .Width(Width),
+            .High(High)
         ) Eink_frame (
             .rst_n   (rst_n),
             .clk_25m (clk_25m),
             .S_Frame (S_Frame),
+            .S_Data  (S_Data),
             .SKV     (SKV),
             .SPV     (SPV),
             .XCL     (XCL),
@@ -100,13 +105,69 @@ module Eink_controller(
     //-----Frame_controller_test-----//
     ///////////////////////////////////
 
+    // S_Data为高时触发发送一的行数据
+
+    localparam  CNT_DATA = Width/4 - 1;  // 数据长度
+
+    reg [9:0]   cnt_data;
+
+    reg [3:0]   STATE_DATA;
+
+    reg [7:0]   Data;
+
+    localparam  IDEL_DATA = 0,
+                STATE1_DATA = 1,
+                DONE_DATA = 2;
+
+    always @(posedge clk_25m or negedge rst_n) begin
+        if (!rst_n) begin
+            // reset
+            STATE_DATA <= 0;
+            EINK_DATA <= 0;
+            cnt_data <= 0;
+        end
+        else begin
+            case(STATE_DATA)
+
+                IDEL_DATA:begin
+                    if (S_Data) begin
+                        STATE_DATA <= S_Data;
+                    end
+                    else begin
+                        STATE_DATA <= IDEL_DATA;
+                    end
+                end
+
+                STATE1_DATA:begin
+                    if (cnt_data < CNT_DATA) begin
+                        EINK_DATA <= Data;
+                        STATE_DATA <= STATE1_DATA;
+                    end
+                    else begin
+                        STATE_DATA <= DONE_DATA;
+                        EINK_DATA <= 0;
+                        cnt_data <= 0;
+                    end
+                end
+
+                DONE_DATA:begin
+                    STATE_DATA <= IDEL_DATA;
+                end
+
+            endcase
+        end
+    end
+
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             // reset
-            
+            Data <= 0;
         end
-        else if () begin
-            
+        else if (counter > 4'd5) begin
+            Data <= 8'b10101010;
+        end
+        else begin
+            Data <= 8'b01010101;
         end
     end
 
@@ -135,7 +196,7 @@ module Eink_controller(
             // reset
             switch <= 0;
         end
-        else if (counter == 2'd2) begin
+        else if (counter > 2'd2) begin
             switch <= 1;
         end
         else begin
