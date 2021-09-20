@@ -142,8 +142,8 @@ OPTRACE "set parameters" START { }
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Eink_controller/Eink_controller.runs/synth_1/Eink_controller.dcp
-  read_ip -quiet C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Eink_controller/Eink_controller.srcs/sources_1/ip/ila_0/ila_0.xci
   read_ip -quiet C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Eink_controller/Eink_controller.srcs/sources_1/ip/clk_wiz_1/clk_wiz_1.xci
+  read_ip -quiet C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Eink_controller/Eink_controller.srcs/sources_1/ip/ila_0/ila_0.xci
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Eink_controller/Eink_controller.srcs/constrs_1/new/TOP_PIN.xdc
 OPTRACE "read constraints: implementation" END { }

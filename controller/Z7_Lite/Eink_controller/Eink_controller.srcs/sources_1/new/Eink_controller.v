@@ -246,6 +246,7 @@ module Eink_controller(
             .probe2(XCL),       // input wire [0:0] XCL
             .probe3(XLE),       // input wire [0:0] XLE
             .probe4(XSTL),      // input wire [0:0] XSTL
-            .probe5(EINK_DATA)  // input wire [7:0] EINK_DATA
+            .probe5(EINK_DATA), // input wire [7:0] EINK_DATA
+            .probe6(S_Data)     // input wire [7:0] S_Data
         );
 endmodule

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Mon Sep 20 10:56:33 2021
+| Date             : Mon Sep 20 13:01:26 2021
 | Host             : Duller running 64-bit major release  (build 9200)
 | Command          : report_power -file Eink_controller_power_routed.rpt -pb Eink_controller_power_summary_routed.pb -rpx Eink_controller_power_routed.rpx
 | Design           : Eink_controller
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.152        |
+| Total On-Chip Power (W)  | 0.153        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.056        |
@@ -53,21 +53,21 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     4936 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1546 |     17600 |            8.78 |
-|   Register               |    <0.001 |     2366 |     35200 |            6.72 |
-|   CARRY4                 |    <0.001 |       71 |      4400 |            1.61 |
-|   LUT as Shift Register  |    <0.001 |      105 |      6000 |            1.75 |
+| Slice Logic              |    <0.001 |     5145 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1622 |     17600 |            9.22 |
+|   Register               |    <0.001 |     2462 |     35200 |            6.99 |
+|   CARRY4                 |    <0.001 |       73 |      4400 |            1.66 |
+|   LUT as Shift Register  |    <0.001 |      110 |      6000 |            1.83 |
 |   BUFG                   |    <0.001 |        4 |        32 |           12.50 |
 |   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
 |   F7/F8 Muxes            |    <0.001 |       39 |     17600 |            0.22 |
-|   Others                 |     0.000 |      401 |       --- |             --- |
-| Signals                  |     0.001 |     3887 |       --- |             --- |
-| Block RAM                |    <0.001 |       52 |        60 |           86.67 |
+|   Others                 |     0.000 |      417 |       --- |             --- |
+| Signals                  |     0.001 |     4019 |       --- |             --- |
+| Block RAM                |    <0.001 |       56 |        60 |           93.33 |
 | PLL                      |     0.049 |        1 |         2 |           50.00 |
 | I/O                      |     0.004 |       42 |       100 |           42.00 |
 | Static Power             |     0.096 |          |           |                 |
-| Total                    |     0.152 |          |           |                 |
+| Total                    |     0.153 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
