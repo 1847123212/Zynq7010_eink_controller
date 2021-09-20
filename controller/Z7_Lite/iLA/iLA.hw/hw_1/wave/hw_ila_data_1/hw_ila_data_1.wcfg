@@ -9,20 +9,17 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="6298fs"></ZoomStartTime>
-      <ZoomEndTime time="24189fs"></ZoomEndTime>
-      <Cursor1Time time="16302fs"></Cursor1Time>
+      <ZoomStartTime time="109973fs"></ZoomStartTime>
+      <ZoomEndTime time="145994fs"></ZoomEndTime>
+      <Cursor1Time time="120573fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="165"></NameColumnWidth>
+      <NameColumnWidth column_width="153"></NameColumnWidth>
       <ValueColumnWidth column_width="88"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="6" />
    <wave_markers>
-      <marker time="19810" label="" />
-      <marker time="16810" label="" />
-      <marker time="20169" label="" />
-      <marker time="13918" label="" />
+      <marker time="26045" label="" />
    </wave_markers>
    <wvobject fp_name="XCL_IBUF" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
