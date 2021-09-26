@@ -15,28 +15,29 @@
 //  H(max) = 2200 [11:0]
 //  V(max) = 1872 [10:0]
 //
-//  | Data     | H    | V    |    Freq    | Wide  | Model |
-//  | -------- | ---- | ---- | ---------- | ----- | ----- |
-//  | ED047TC2 | 540  | 960  | 85Hz       | 8bit  |       |
-//  | ED052TC4 | 720  | 1280 | 85Hz       | 8bit  |       |
-//  | ED060SC4 | 600  | 400  | 85Hz       | 8bit  |       |
-//  | ED060KC1 | 1072 | 1448 | 85Hz       | 16bit |       |
-//  | ED078KC1 | 1404 | 1872 | 85Hz       | 16bit |       |
-//  | ED097TC2 | 1200 | 825  | 85Hz 24Mhz | 8bit  |   √   |
-//  | ED103TC2 | 1404 | 1872 | 85Hz       | 16bit |       |
-//  | ES108FC1 | 1920 | 1080 | 85Hz       | 16bit |       |
-//  | ES133UT1 | 1600 | 1200 | 65Hz 40Mhz | 8bit  |   √   |
-//  | ES133TT3 | 2200 | 1650 | 75Hz       | 16bit |       |
+//  | Data     | H    | V    | Glass |  XCL  | Wide  | Model |
+//  | -------- | ---- | ---- | ----- | ----- | ----- | ----- |
+//  | ED047TC2 | 540  | 960  | 85Hz  |       | 8bit  |       |
+//  | ED052TC4 | 720  | 1280 | 85Hz  |       | 8bit  |       |
+//  | ED060SC4 | 600  | 400  | 85Hz  |       | 8bit  |       |
+//  | ED060KC1 | 1072 | 1448 | 85Hz  |       | 16bit |       |
+//  | ED078KC1 | 1404 | 1872 | 85Hz  |       | 16bit |       |
+//  | ED097TC2 | 1200 | 825  | 85Hz  | 24Mhz | 8bit  |   √   |
+//  | ED103TC2 | 1404 | 1872 | 85Hz  |       | 16bit |       |
+//  | ES108FC1 | 1920 | 1080 | 85Hz  |       | 16bit |       |
+//  | ES133UT1 | 1600 | 1200 | 65Hz  | 40Mhz | 8bit  |   √   |
+//  | ES133TT3 | 2200 | 1650 | 75Hz  |       | 16bit |       |
 //
 //  目前不考虑16bit屏幕,因为我手上没有这玩意...
 //
 //////////////////////////////////////////////////////////////////////
+
 module TOP_controller
     #(
-    parameter [11:0] H        = 1200,  // 宽
-    parameter [10:0] V        = 825,  // 高
-    parameter [10:0] pix_Freq = 24,    // pix_xcl频率,请更改 ila_0 的输出频率与之对应
-    parameter [11:0] VCOM     = 2780)  // 2780 = -2.78V
+    parameter [11:0] H        = 1600,  // 宽
+    parameter [10:0] V        = 1200,   // 高
+    parameter [10:0] pix_Freq = 5,     // pix_xcl频率,请更改 ila_0 的输出频率与之对应
+    parameter [11:0] VCOM     = 1680)  // 2780 = -2.78V
     (
     // 系统
     input  wire clk,
@@ -115,7 +116,6 @@ module TOP_controller
         .E_Frame (E_Frame)
     );
 
-
     ///////////////////////////////////
     //-------------Data--------------//
     ///////////////////////////////////
@@ -139,16 +139,16 @@ module TOP_controller
 
     reg [3:0] Data_STATE;
 
-    localparam  Data_IDEL = 0,
+    localparam  Data_IDEL   = 0,
                 Data_STATE1 = 1,
-                Data_DONE = 2;
+                Data_DONE   = 2;
 
     always @(negedge XSTL or posedge XCL or negedge rst_n) begin
         if (!rst_n) begin
             // reset
-            EINK_DATA <= 0;
+            EINK_DATA  <= 0;
             Data_STATE <= 0;
-            cnt_data <= 0;
+            cnt_data   <= 0;
         end
         else begin
             case(Data_STATE)
@@ -157,31 +157,31 @@ module TOP_controller
                     if (!XSTL) begin
                         Data_STATE <= Data_STATE1;
                         EINK_DATA <= Data;
-                        cnt_data <= cnt_data + 1;
+                        cnt_data  <= cnt_data + 1;
                     end
                 end
 
                 Data_STATE1:begin
                     if (cnt_data < H/4 - 1) begin  // 数据保持
-                        cnt_data <= cnt_data + 1;
+                        cnt_data  <= cnt_data + 1;
                         EINK_DATA <= Data;
                     end
                     else begin
-                        EINK_DATA <= 0;
+                        EINK_DATA  <= 0;
                         Data_STATE <= Data_DONE;
                     end
                 end
 
                 Data_DONE:begin
-                    EINK_DATA <= 0;
+                    EINK_DATA  <= 0;
                     Data_STATE <= 0;
-                    cnt_data <= 0;
+                    cnt_data   <= 0;
                 end
 
                 default:begin
-                    EINK_DATA <= 0;
+                    EINK_DATA  <= 0;
                     Data_STATE <= 0;
-                    cnt_data <= 0;
+                    cnt_data   <= 0;
                 end
 
             endcase
@@ -234,14 +234,14 @@ module TOP_controller
     );
 
     ila_0 Logic (
-        .clk(ila_clk), // input wire clk
+        .clk(ila_clk),      // input wire clk
 
-        .probe0(SKV), // input wire [0:0]  probe0  
-        .probe1(SPV), // input wire [0:0]  probe1 
-        .probe2(XCL), // input wire [0:0]  probe2 
-        .probe3(XLE), // input wire [0:0]  probe3 
-        .probe4(XSTL), // input wire [0:0]  probe4 
-        .probe5(EINK_DATA) // input wire [7:0]  probe5
+        .probe0(SKV),       // input wire [0:0]  probe0  
+        .probe1(SPV),       // input wire [0:0]  probe1 
+        .probe2(XCL),       // input wire [0:0]  probe2 
+        .probe3(XLE),       // input wire [0:0]  probe3 
+        .probe4(XSTL),      // input wire [0:0]  probe4 
+        .probe5(EINK_DATA)  // input wire [7:0]  probe5
     );
 
 endmodule

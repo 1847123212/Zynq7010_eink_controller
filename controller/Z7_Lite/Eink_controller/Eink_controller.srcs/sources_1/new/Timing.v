@@ -150,9 +150,9 @@
 
 module Timing 
     #(  
-    parameter [11:0] H            = 1200,
-    parameter [10:0] V            = 825,
-    parameter [10:0] pix_Freq     = 24)
+    parameter [11:0] H        = 1200,
+    parameter [10:0] V        = 825,
+    parameter [10:0] pix_Freq = 24)
     (
     input wire          clk,
     input wire          rst_n,
@@ -184,42 +184,41 @@ module Timing
     reg [10:0]  OUT_XSTL_L;
     reg [10:0]  OUT_XSTL_L_K;
 
-    
     always @(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             // reset
-            OUT_cty     <= 0;
-            OUT_T_LEdly <= 0;
-            OUT_XLE_H_K <= 0;
-            OUT_T_LEoff <= 0;
-            OUT_T_SKV   <= 0;
-            OUT_T_SKV_H <= 0;
-            OUT_T_N_SKV <= 0;
-            OUT_SPV_L   <= 0;
-            OUT_XLE_H   <= 0;
-            OUT_XSTL_L  <= 0;
+            OUT_cty      <= 0;
+            OUT_T_LEdly  <= 0;
+            OUT_XLE_H_K  <= 0;
+            OUT_T_LEoff  <= 0;
+            OUT_T_SKV    <= 0;
+            OUT_T_SKV_H  <= 0;
+            OUT_T_N_SKV  <= 0;
+            OUT_SPV_L    <= 0;
+            OUT_XLE_H    <= 0;
+            OUT_XSTL_L   <= 0;
         end
         else begin
-            OUT_cty     = CNT_1S / (pix_Freq * 20'd1000000);
-            OUT_T_LEdly = (tLEdly + OUT_cty - 1) / OUT_cty;
-            OUT_XLE_H_K = (tLEw   + OUT_cty - 1) / OUT_cty;
-            OUT_T_LEoff = (tLEoff + OUT_cty - 1) / OUT_cty;
-            OUT_T_SKV   = (H / 4) + OUT_T_LEdly + OUT_XLE_H_K + OUT_T_LEoff;
-            OUT_T_SKV_H = (H / 4) * 0.8;  // SKV为高的周期数占Data所需周期数的0.8
-            OUT_T_N_SKV = V + 5;
-            OUT_SPV_L   = OUT_T_SKV_H / 2;
-            OUT_XLE_H   = (OUT_T_SKV - OUT_T_SKV_H - OUT_T_LEdly - OUT_XLE_H_K - OUT_T_LEoff) / 2 + OUT_T_SKV_H;
-            OUT_XSTL_L  = OUT_XLE_H + OUT_XLE_H_K + OUT_T_LEoff;
-            OUT_XSTL_L_K= H / 4;
+            OUT_cty      = CNT_1S / (pix_Freq * 20'd1000000);
+            OUT_T_LEdly  = (tLEdly + OUT_cty - 1) / OUT_cty;
+            OUT_XLE_H_K  = (tLEw   + OUT_cty - 1) / OUT_cty;
+            OUT_T_LEoff  = (tLEoff + OUT_cty - 1) / OUT_cty;
+            OUT_T_SKV    = (H / 4) + OUT_T_LEdly + OUT_XLE_H_K + OUT_T_LEoff;
+            OUT_T_SKV_H  = (H / 4) * 0.8;  // SKV为高的周期数占Data所需周期数的0.8
+            OUT_T_N_SKV  = V + 5;
+            OUT_SPV_L    = OUT_T_SKV_H / 2;
+            OUT_XLE_H    = (OUT_T_SKV - OUT_T_SKV_H - OUT_T_LEdly - OUT_XLE_H_K - OUT_T_LEoff) / 2 + OUT_T_SKV_H;
+            OUT_XSTL_L   = OUT_XLE_H + OUT_XLE_H_K + OUT_T_LEoff;
+            OUT_XSTL_L_K = H / 4;
 
-            N_SKV       = OUT_T_N_SKV - 1;  // 时序补偿
-            T_SKV       = OUT_T_SKV - 1;
-            T_SKV_H     = OUT_T_SKV_H;
-            SPV_L       = OUT_SPV_L;
-            XLE_H       = OUT_XLE_H;
-            XLE_H_K     = OUT_XLE_H_K - 1;
-            XSTL_L      = OUT_XSTL_L;
-            XSTL_L_K    = OUT_XSTL_L_K - 1;
+            N_SKV        = OUT_T_N_SKV - 1;  // 时序补偿
+            T_SKV        = OUT_T_SKV - 1;
+            T_SKV_H      = OUT_T_SKV_H;
+            SPV_L        = OUT_SPV_L;
+            XLE_H        = OUT_XLE_H;
+            XLE_H_K      = OUT_XLE_H_K - 1;
+            XSTL_L       = OUT_XSTL_L;
+            XSTL_L_K     = OUT_XSTL_L_K - 1;
         end
     end
 
