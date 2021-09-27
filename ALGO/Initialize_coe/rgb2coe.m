@@ -22,7 +22,6 @@ fprintf(fid0,'MEMORY_INITIALIZATION_RADIX=10clear;\n');
 fprintf(fid0,'MEMORY_INITIALIZATION_VECTOR=\n');
 
 for v=1:V
-    j=0;
     for h=1:H/4
         if(DPic(v,h*4-3) == 1)
             pix1=B;
