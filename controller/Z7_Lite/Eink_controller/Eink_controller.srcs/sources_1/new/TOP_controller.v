@@ -34,10 +34,10 @@
 
 module TOP_controller
     #(
-    parameter [11:0] H        = 1600,  // 宽
-    parameter [10:0] V        = 1200,   // 高
-    parameter [10:0] pix_Freq = 5,     // pix_xcl频率,请更改 ila_0 的输出频率与之对应
-    parameter [11:0] VCOM     = 1680)  // 2780 = -2.78V
+    parameter [11:0] H        = 1200,  // 宽
+    parameter [10:0] V        = 825,   // 高
+    parameter [10:0] pix_Freq = 24,     // pix_xcl频率,请更改 ila_0 的输出频率与之对应
+    parameter [11:0] VCOM     = 2780)  // 2780 = -2.78V
     (
     // 系统
     input  wire clk,
@@ -94,7 +94,7 @@ module TOP_controller
 
     level2pulse #(
         .MODE("FALLING")
-    ) inst_level2pulse (
+    ) level2pulse (
         .clk(pix_clk), 
         .in(key), 
         .out(S_Frame)

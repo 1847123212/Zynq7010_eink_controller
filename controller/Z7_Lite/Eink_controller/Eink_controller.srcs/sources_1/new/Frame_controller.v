@@ -8,7 +8,7 @@ module Frame_controller
     input wire rst_n,
     input wire pix_clk,
 
-    input wire S_Frame,       // 帧开始
+    input wire  S_Frame,      // 帧开始
 
     output reg  SKV,          // 时钟脉冲源驱动
     output reg  SPV,          // 启动脉冲门驱动器
@@ -16,7 +16,7 @@ module Frame_controller
     output reg  XLE,          // 锁存使能源驱动器
     output reg  XSTL,         // 启动脉冲源驱动器
   
-    output reg E_Frame        // 帧结束
+    output reg  E_Frame       // 帧结束
     );
 
     ///////////////////////////////////

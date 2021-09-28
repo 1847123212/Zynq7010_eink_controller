@@ -1,5 +1,4 @@
 
-
 module SPC_controller(
     input wire clk,
     input wire rst_n,

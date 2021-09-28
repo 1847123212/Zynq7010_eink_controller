@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Eink_controller/Eink_controller.gen/sources_1/ip/img_rom/sim/img_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module img_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Eink_controller/Eink_controller.srcs/sim_1/new/Data_controller_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Data_controller_tb
