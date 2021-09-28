@@ -14,11 +14,14 @@ V=825;%高
 
 uint8 DPicN(V,H/4);%定义一个300*825深度为8位的矩阵
 
-W=sprintf('%02s',dec2bin(2));%白色
-B=sprintf('%02s',dec2bin(1));%黑色
+%W=sprintf('%02s',dec2bin(2));%白色
+%B=sprintf('%02s',dec2bin(1));%黑色
+
+W='1';%白色
+B='0';%黑色
 
 fid0 = fopen('img.coe','wt');
-fprintf(fid0,'MEMORY_INITIALIZATION_RADIX=10clear;\n');
+fprintf(fid0,'MEMORY_INITIALIZATION_RADIX=10;\n');
 fprintf(fid0,'MEMORY_INITIALIZATION_VECTOR=\n');
 
 for v=1:V
@@ -45,9 +48,9 @@ for v=1:V
         end
         pixN=[pix1,pix2,pix3,pix4];
         if(v*h==V*H/4)
-            fprintf(fid0,'%03d;',bin2dec(pixN));
+            fprintf(fid0,'%02d;',bin2dec(pixN));
         else
-            fprintf(fid0,'%03d,\n',bin2dec(pixN));
+            fprintf(fid0,'%02d,\n',bin2dec(pixN));
         end
     end
 end
