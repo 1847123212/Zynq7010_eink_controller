@@ -15,7 +15,7 @@ module Frame_controller
     output wire XCL,          // 时钟脉冲源驱动
     output reg  XLE,          // 锁存使能源驱动器
     output reg  XSTL,         // 启动脉冲源驱动器
-  
+
     output reg  E_Frame       // 帧结束
     );
 

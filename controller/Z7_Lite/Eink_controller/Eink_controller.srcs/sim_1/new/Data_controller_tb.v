@@ -3,14 +3,12 @@
 module Data_controller_tb();
 
     reg pix_clk;
-    reg [17:0] rom_addr;
-    wire [3:0] rom_data;
+    reg XSTL;
+    reg rst_n;
+    wire [7:0] DATA;
 
-    img_rom your_instance_name (
-        .clka(pix_clk),    // input wire clka
-        .addra(rom_addr),  // input wire [17 : 0] addra
-        .douta(rom_data)  // output wire [3 : 0] douta
-    );
+    Data_controller inst_Data_controller (.pix_clk(pix_clk), .rst_n(rst_n), .XSTL(XSTL), .DATA(DATA));
+
 
     initial begin
         pix_clk = 0;
@@ -18,9 +16,20 @@ module Data_controller_tb();
     end
 
     initial begin
+        XSTL = 1;
+        rst_n = 1;
         repeat(20) @(posedge pix_clk);
-        rom_addr = 0;
-        forever #(20) rom_addr = rom_addr + 1;
+        rst_n = 0;
+        repeat(20) @(posedge pix_clk);
+        rst_n =1;
+        repeat(20) @(posedge pix_clk);
+        XSTL = 0;
+        repeat(300) @(posedge pix_clk);
+        XSTL = 1;
+        repeat(100) @(posedge pix_clk);
+        XSTL = 0;
+        repeat(300) @(posedge pix_clk);
+        XSTL = 1;
     end
 
 endmodule

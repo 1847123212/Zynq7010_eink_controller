@@ -65,7 +65,7 @@ module TOP_controller
     output wire XCL,  // 时钟脉冲源驱动
     output wire XLE,  // 锁存使能源驱动器
     output wire XSTL, // 启动脉冲源驱动器
-    output reg [7:0] EINK_DATA, // 数据
+    output wire [7:0] EINK_DATA, // 数据
 
     // LED
     output wire [15:0] LED     // 灯组
@@ -120,73 +120,76 @@ module TOP_controller
     //-------------Data--------------//
     ///////////////////////////////////
 
-    reg [7:0] Data;
+    Data_controller Data_controller (.pix_clk(pix_clk), .rst_n(rst_n), .XSTL(XSTL), .DATA(EINK_DATA));
 
-    always @(posedge XCL or negedge rst_n) begin
-        if (!rst_n) begin
-            // reset
-            Data <= 0;
-        end
-        else if (counter < 4'd4) begin
-            Data <= 8'b10101010;
-        end
-        else begin
-            Data <= 8'b01010101;
-        end
-    end
 
-    reg [10:0] cnt_data;
-
-    reg [3:0] Data_STATE;
-
-    localparam  Data_IDEL   = 0,
-                Data_STATE1 = 1,
-                Data_DONE   = 2;
-
-    always @(negedge XSTL or posedge XCL or negedge rst_n) begin
-        if (!rst_n) begin
-            // reset
-            EINK_DATA  <= 0;
-            Data_STATE <= 0;
-            cnt_data   <= 0;
-        end
-        else begin
-            case(Data_STATE)
-
-                Data_IDEL:begin
-                    if (!XSTL) begin
-                        Data_STATE <= Data_STATE1;
-                        EINK_DATA <= Data;
-                        cnt_data  <= cnt_data + 1;
-                    end
-                end
-
-                Data_STATE1:begin
-                    if (cnt_data < H/4 - 1) begin  // 数据保持
-                        cnt_data  <= cnt_data + 1;
-                        EINK_DATA <= Data;
-                    end
-                    else begin
-                        EINK_DATA  <= 0;
-                        Data_STATE <= Data_DONE;
-                    end
-                end
-
-                Data_DONE:begin
-                    EINK_DATA  <= 0;
-                    Data_STATE <= 0;
-                    cnt_data   <= 0;
-                end
-
-                default:begin
-                    EINK_DATA  <= 0;
-                    Data_STATE <= 0;
-                    cnt_data   <= 0;
-                end
-
-            endcase
-        end
-    end
+//    reg [7:0] Data;
+//
+//    always @(posedge XCL or negedge rst_n) begin
+//        if (!rst_n) begin
+//            // reset
+//            Data <= 0;
+//        end
+//        else if (counter < 4'd4) begin
+//            Data <= 8'b10101010;
+//        end
+//        else begin
+//            Data <= 8'b01010101;
+//        end
+//    end
+//
+//    reg [10:0] cnt_data;
+//
+//    reg [3:0] Data_STATE;
+//
+//    localparam  Data_IDEL   = 0,
+//                Data_STATE1 = 1,
+//                Data_DONE   = 2;
+//
+//    always @(negedge XSTL or posedge XCL or negedge rst_n) begin
+//        if (!rst_n) begin
+//            // reset
+//            EINK_DATA  <= 0;
+//            Data_STATE <= 0;
+//            cnt_data   <= 0;
+//        end
+//        else begin
+//            case(Data_STATE)
+//
+//                Data_IDEL:begin
+//                    if (!XSTL) begin
+//                        Data_STATE <= Data_STATE1;
+//                        EINK_DATA <= Data;
+//                        cnt_data  <= cnt_data + 1;
+//                    end
+//                end
+//
+//                Data_STATE1:begin
+//                    if (cnt_data < H/4 - 1) begin  // 数据保持
+//                        cnt_data  <= cnt_data + 1;
+//                        EINK_DATA <= Data;
+//                    end
+//                    else begin
+//                        EINK_DATA  <= 0;
+//                        Data_STATE <= Data_DONE;
+//                    end
+//                end
+//
+//                Data_DONE:begin
+//                    EINK_DATA  <= 0;
+//                    Data_STATE <= 0;
+//                    cnt_data   <= 0;
+//                end
+//
+//                default:begin
+//                    EINK_DATA  <= 0;
+//                    Data_STATE <= 0;
+//                    cnt_data   <= 0;
+//                end
+//
+//            endcase
+//        end
+//    end
 
     ///////////////////////////////////
     //------------电源控制------------//
@@ -233,15 +236,15 @@ module TOP_controller
         .clk(clk)  // 50Mhz
     );
 
-    ila_0 Logic (
-        .clk(ila_clk),      // input wire clk
-
-        .probe0(SKV),       // input wire [0:0]  probe0  
-        .probe1(SPV),       // input wire [0:0]  probe1 
-        .probe2(XCL),       // input wire [0:0]  probe2 
-        .probe3(XLE),       // input wire [0:0]  probe3 
-        .probe4(XSTL),      // input wire [0:0]  probe4 
-        .probe5(EINK_DATA)  // input wire [7:0]  probe5
-    );
+//    ila_0 Logic (
+//        .clk(ila_clk),      // input wire clk
+//    
+//        .probe0(SKV),       // input wire [0:0]  probe0  
+//        .probe1(SPV),       // input wire [0:0]  probe1 
+//        .probe2(XCL),       // input wire [0:0]  probe2 
+//        .probe3(XLE),       // input wire [0:0]  probe3 
+//        .probe4(XSTL),      // input wire [0:0]  probe4 
+//        .probe5(EINK_DATA)  // input wire [7:0]  probe5
+//    );
 
 endmodule
