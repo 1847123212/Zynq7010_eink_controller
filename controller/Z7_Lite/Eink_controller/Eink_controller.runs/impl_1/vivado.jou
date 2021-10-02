@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Oct  1 14:24:20 2021
+# Process ID: 1808
+# Current directory: C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Eink_controller/Eink_controller.runs/impl_1
+# Command line: vivado.exe -log TOP_controller.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TOP_controller.tcl -notrace
+# Log file: C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Eink_controller/Eink_controller.runs/impl_1/TOP_controller.vdi
+# Journal file: C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Eink_controller/Eink_controller.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source TOP_controller.tcl -notrace
