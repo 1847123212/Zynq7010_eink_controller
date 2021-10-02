@@ -1,0 +1,293 @@
+20:44:17 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\temp_xsdb_launch_script.tcl
+20:44:17 INFO  : Registering command handlers for Vitis TCF services
+20:44:20 INFO  : Platform repository initialization has completed.
+20:44:20 INFO  : XSCT server has started successfully.
+20:44:21 INFO  : plnx-install-location is set to ''
+20:44:21 INFO  : Successfully done setting XSCT server connection channel  
+20:44:21 INFO  : Successfully done query RDI_DATADIR 
+20:44:21 INFO  : Successfully done setting workspace for the tool. 
+20:46:19 INFO  : Result from executing command 'getProjects': PL_RW_DDR
+20:46:19 INFO  : Result from executing command 'getPlatforms': 
+21:01:42 INFO  : Result from executing command 'getProjects': PL_RW_DDR
+21:01:42 INFO  : Result from executing command 'getPlatforms': PL_RW_DDR|C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/PL_RW_DDR.xpfm
+21:01:43 INFO  : Checking for BSP changes to sync application flags for project 'RW_DDR'...
+21:04:09 INFO  : Checking for BSP changes to sync application flags for project 'RW_DDR'...
+21:04:45 INFO  : Checking for BSP changes to sync application flags for project 'RW_DDR'...
+21:15:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:15:07 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:15:07 INFO  : 'jtag frequency' command is executed.
+21:15:07 INFO  : Context for 'APU' is selected.
+21:15:07 INFO  : System reset is completed.
+21:15:10 INFO  : 'after 3000' command is executed.
+21:15:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}' command is executed.
+21:15:12 INFO  : Device configured successfully with "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit"
+21:15:12 INFO  : Context for 'APU' is selected.
+21:15:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa'.
+21:15:12 INFO  : 'configparams force-mem-access 1' command is executed.
+21:15:12 INFO  : Context for 'APU' is selected.
+21:15:12 INFO  : Sourcing of 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl' is done.
+21:15:12 INFO  : 'ps7_init' command is executed.
+21:15:12 INFO  : 'ps7_post_config' command is executed.
+21:15:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:15:12 INFO  : The application 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:15:12 INFO  : 'configparams force-mem-access 0' command is executed.
+21:15:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}
+fpga -file C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:15:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:15:12 INFO  : 'con' command is executed.
+21:15:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:15:12 INFO  : Launch script is exported to file 'C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\RW_DDR_system\_ide\scripts\systemdebugger_rw_ddr_system_standalone.tcl'
+21:16:37 INFO  : Disconnected from the channel tcfchan#2.
+21:16:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:16:38 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:16:38 INFO  : 'jtag frequency' command is executed.
+21:16:38 INFO  : Context for 'APU' is selected.
+21:16:38 INFO  : System reset is completed.
+21:16:41 INFO  : 'after 3000' command is executed.
+21:16:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}' command is executed.
+21:16:43 INFO  : Device configured successfully with "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit"
+21:16:43 INFO  : Context for 'APU' is selected.
+21:16:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa'.
+21:16:43 INFO  : 'configparams force-mem-access 1' command is executed.
+21:16:43 INFO  : Context for 'APU' is selected.
+21:16:43 INFO  : Sourcing of 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl' is done.
+21:16:43 INFO  : 'ps7_init' command is executed.
+21:16:43 INFO  : 'ps7_post_config' command is executed.
+21:16:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:16:43 INFO  : The application 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:16:43 INFO  : 'configparams force-mem-access 0' command is executed.
+21:16:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}
+fpga -file C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:16:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:16:43 INFO  : 'con' command is executed.
+21:16:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:16:43 INFO  : Launch script is exported to file 'C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\RW_DDR_system\_ide\scripts\systemdebugger_rw_ddr_system_standalone.tcl'
+21:19:58 INFO  : Checking for BSP changes to sync application flags for project 'RW_DDR'...
+21:20:13 INFO  : Disconnected from the channel tcfchan#3.
+21:20:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:20:13 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:20:13 INFO  : 'jtag frequency' command is executed.
+21:20:13 INFO  : Context for 'APU' is selected.
+21:20:13 INFO  : System reset is completed.
+21:20:16 INFO  : 'after 3000' command is executed.
+21:20:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}' command is executed.
+21:20:18 INFO  : Device configured successfully with "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit"
+21:20:18 INFO  : Context for 'APU' is selected.
+21:20:18 INFO  : Hardware design and registers information is loaded from 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa'.
+21:20:18 INFO  : 'configparams force-mem-access 1' command is executed.
+21:20:18 INFO  : Context for 'APU' is selected.
+21:20:18 INFO  : Sourcing of 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl' is done.
+21:20:18 INFO  : 'ps7_init' command is executed.
+21:20:18 INFO  : 'ps7_post_config' command is executed.
+21:20:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:20:19 INFO  : The application 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:20:19 INFO  : 'configparams force-mem-access 0' command is executed.
+21:20:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}
+fpga -file C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:20:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:20:19 INFO  : 'con' command is executed.
+21:20:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:20:19 INFO  : Launch script is exported to file 'C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\RW_DDR_system\_ide\scripts\systemdebugger_rw_ddr_system_standalone.tcl'
+21:22:16 INFO  : Checking for BSP changes to sync application flags for project 'RW_DDR'...
+21:22:31 INFO  : Disconnected from the channel tcfchan#4.
+21:22:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:22:32 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:22:32 INFO  : 'jtag frequency' command is executed.
+21:22:32 INFO  : Context for 'APU' is selected.
+21:22:32 INFO  : System reset is completed.
+21:22:35 INFO  : 'after 3000' command is executed.
+21:22:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}' command is executed.
+21:22:37 INFO  : Device configured successfully with "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit"
+21:22:37 INFO  : Context for 'APU' is selected.
+21:22:37 INFO  : Hardware design and registers information is loaded from 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa'.
+21:22:37 INFO  : 'configparams force-mem-access 1' command is executed.
+21:22:37 INFO  : Context for 'APU' is selected.
+21:22:37 INFO  : Sourcing of 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl' is done.
+21:22:38 INFO  : 'ps7_init' command is executed.
+21:22:38 INFO  : 'ps7_post_config' command is executed.
+21:22:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:22:38 INFO  : The application 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:22:38 INFO  : 'configparams force-mem-access 0' command is executed.
+21:22:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}
+fpga -file C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:22:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:22:38 INFO  : 'con' command is executed.
+21:22:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:22:38 INFO  : Launch script is exported to file 'C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\RW_DDR_system\_ide\scripts\systemdebugger_rw_ddr_system_standalone.tcl'
+21:22:47 INFO  : Disconnected from the channel tcfchan#5.
+21:22:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:22:47 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:22:47 INFO  : 'jtag frequency' command is executed.
+21:22:47 INFO  : Context for 'APU' is selected.
+21:22:47 INFO  : System reset is completed.
+21:22:50 INFO  : 'after 3000' command is executed.
+21:22:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}' command is executed.
+21:22:52 INFO  : Device configured successfully with "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit"
+21:22:52 INFO  : Context for 'APU' is selected.
+21:22:52 INFO  : Hardware design and registers information is loaded from 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa'.
+21:22:52 INFO  : 'configparams force-mem-access 1' command is executed.
+21:22:52 INFO  : Context for 'APU' is selected.
+21:22:52 INFO  : Sourcing of 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl' is done.
+21:22:52 INFO  : 'ps7_init' command is executed.
+21:22:52 INFO  : 'ps7_post_config' command is executed.
+21:22:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:22:53 INFO  : The application 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:22:53 INFO  : 'configparams force-mem-access 0' command is executed.
+21:22:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}
+fpga -file C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:22:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:22:53 INFO  : 'con' command is executed.
+21:22:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:22:53 INFO  : Launch script is exported to file 'C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\RW_DDR_system\_ide\scripts\systemdebugger_rw_ddr_system_standalone.tcl'
+21:24:06 INFO  : Disconnected from the channel tcfchan#6.
+21:24:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:24:07 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+21:24:07 INFO  : 'jtag frequency' command is executed.
+21:24:07 INFO  : Context for 'APU' is selected.
+21:24:07 INFO  : System reset is completed.
+21:24:10 INFO  : 'after 3000' command is executed.
+21:24:10 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}' command is executed.
+21:24:12 INFO  : Device configured successfully with "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit"
+21:24:12 INFO  : Context for 'APU' is selected.
+21:24:12 INFO  : Hardware design and registers information is loaded from 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa'.
+21:24:12 INFO  : 'configparams force-mem-access 1' command is executed.
+21:24:12 INFO  : Context for 'APU' is selected.
+21:24:12 INFO  : Sourcing of 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl' is done.
+21:24:12 INFO  : 'ps7_init' command is executed.
+21:24:12 INFO  : 'ps7_post_config' command is executed.
+21:24:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:24:12 INFO  : The application 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:24:12 INFO  : 'configparams force-mem-access 0' command is executed.
+21:24:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}
+fpga -file C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/PL_RW_DDR/export/PL_RW_DDR/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/RW_DDR/Debug/RW_DDR.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:24:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:24:12 INFO  : 'con' command is executed.
+21:24:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:24:12 INFO  : Launch script is exported to file 'C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\RW_DDR_system\_ide\scripts\systemdebugger_rw_ddr_system_standalone.tcl'
+00:12:05 INFO  : Disconnected from the channel tcfchan#7.

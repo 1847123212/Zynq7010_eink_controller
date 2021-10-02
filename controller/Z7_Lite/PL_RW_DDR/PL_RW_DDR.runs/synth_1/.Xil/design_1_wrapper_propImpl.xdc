@@ -1,0 +1,7 @@
+set_property SRC_FILE_INFO {cfile:C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.srcs/constrs_1/new/TOP_PIN.xdc rfile:../../../PL_RW_DDR.srcs/constrs_1/new/TOP_PIN.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P16 [get_ports {key[0]}]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P15 [get_ports {done[0]}]
+set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U12 [get_ports {error[0]}]

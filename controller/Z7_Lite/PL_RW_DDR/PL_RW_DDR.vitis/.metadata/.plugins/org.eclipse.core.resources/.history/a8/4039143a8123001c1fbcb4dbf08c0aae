@@ -1,0 +1,34 @@
+#include <stdio.h>
+#include "xil_cache.h"
+#include "xparameters.h"
+#include "xparameters_ps.h"
+#include "platform.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+
+
+int main()
+{
+    int i = 0;
+    char A;
+    int rev;
+
+    Xil_DCacheDisable();
+    print("PL RW DDR TEST!\n\r");
+    while(1)
+    {
+    	scanf("%c",&A);
+    	if(A == "A")
+    	{
+    		print("start\n\r");
+    		while(i*4<4096)
+    		{
+    			rev = Xil_In32(DDR_BASERDDR+i*4);
+    			xil_printf("the address at %s data is : %d \r\n",DDR_BASERDDR+i*4,rev);
+    			++i;
+    		}
+    		i = 0;
+    	}
+    }
+    return 0;
+}
