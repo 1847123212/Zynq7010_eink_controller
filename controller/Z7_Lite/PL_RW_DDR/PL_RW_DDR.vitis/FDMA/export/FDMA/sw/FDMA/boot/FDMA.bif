@@ -1,0 +1,7 @@
+/*FDMA*/
+the_ROM_image:
+{
+  [bootloader]<FDMA/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}
