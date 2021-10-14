@@ -1,0 +1,7 @@
+/*Hello_world*/
+the_ROM_image:
+{
+  [bootloader]<Hello_world/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

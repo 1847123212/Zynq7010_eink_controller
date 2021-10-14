@@ -1,0 +1,75 @@
+10:56:50 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\temp_xsdb_launch_script.tcl
+10:56:53 INFO  : Registering command handlers for Vitis TCF services
+10:56:57 INFO  : Platform repository initialization has completed.
+10:56:57 INFO  : XSCT server has started successfully.
+10:56:58 INFO  : plnx-install-location is set to ''
+10:56:59 INFO  : Successfully done setting XSCT server connection channel  
+10:56:59 INFO  : Successfully done query RDI_DATADIR 
+10:56:59 INFO  : Successfully done setting workspace for the tool. 
+15:11:23 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\temp_xsdb_launch_script.tcl
+15:11:23 INFO  : Registering command handlers for Vitis TCF services
+15:11:26 INFO  : XSCT server has started successfully.
+15:11:26 INFO  : Successfully done setting XSCT server connection channel  
+15:11:26 INFO  : plnx-install-location is set to ''
+15:11:26 INFO  : Successfully done setting workspace for the tool. 
+15:11:26 INFO  : Successfully done query RDI_DATADIR 
+15:11:26 INFO  : Platform repository initialization has completed.
+15:36:47 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\temp_xsdb_launch_script.tcl
+15:36:48 INFO  : Registering command handlers for Vitis TCF services
+15:36:50 INFO  : XSCT server has started successfully.
+15:36:51 INFO  : plnx-install-location is set to ''
+15:36:51 INFO  : Successfully done setting XSCT server connection channel  
+15:36:51 INFO  : Successfully done query RDI_DATADIR 
+15:36:51 INFO  : Successfully done setting workspace for the tool. 
+15:36:51 INFO  : Platform repository initialization has completed.
+15:37:37 INFO  : Result from executing command 'getProjects': Hello_world
+15:37:38 INFO  : Result from executing command 'getPlatforms': 
+15:39:53 INFO  : Result from executing command 'getProjects': Hello_world
+15:39:53 INFO  : Result from executing command 'getPlatforms': Hello_world|C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/Hello_world/export/Hello_world/Hello_world.xpfm
+15:39:53 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+15:40:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:40:55 INFO  : Jtag cable 'Digilent JTAG-HS2 201706300081' is selected.
+15:40:55 INFO  : 'jtag frequency' command is executed.
+15:40:55 INFO  : Context for 'APU' is selected.
+15:40:55 INFO  : System reset is completed.
+15:40:58 INFO  : 'after 3000' command is executed.
+15:40:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}' command is executed.
+15:41:00 INFO  : Device configured successfully with "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/test/_ide/bitstream/system_wrapper.bit"
+15:41:00 INFO  : Context for 'APU' is selected.
+15:41:00 INFO  : Hardware design and registers information is loaded from 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/Hello_world/export/Hello_world/hw/system_wrapper.xsa'.
+15:41:00 INFO  : 'configparams force-mem-access 1' command is executed.
+15:41:01 INFO  : Context for 'APU' is selected.
+15:41:01 INFO  : Sourcing of 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/test/_ide/psinit/ps7_init.tcl' is done.
+15:41:01 INFO  : 'ps7_init' command is executed.
+15:41:01 INFO  : 'ps7_post_config' command is executed.
+15:41:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:41:01 INFO  : The application 'C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/test/Debug/test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:41:01 INFO  : 'configparams force-mem-access 0' command is executed.
+15:41:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS2 201706300081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS2-201706300081-13722093-0"}
+fpga -file C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/test/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/Hello_world/export/Hello_world/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/test/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.vitis/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:41:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:41:01 INFO  : 'con' command is executed.
+15:41:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:41:01 INFO  : Launch script is exported to file 'C:\Users\Admin\Desktop\Zynq7010_eink_controller\controller\Z7_Lite\PL_RW_DDR\PL_RW_DDR.vitis\test_system\_ide\scripts\systemdebugger_test_system_standalone.tcl'
+20:12:02 INFO  : Disconnected from the channel tcfchan#2.
