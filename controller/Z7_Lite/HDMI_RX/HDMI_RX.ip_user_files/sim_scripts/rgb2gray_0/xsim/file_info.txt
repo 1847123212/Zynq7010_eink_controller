@@ -1,0 +1,3 @@
+rgb2gray.v,verilog,xil_defaultlib,../../../../HDMI_RX.gen/sources_1/ip/rgb2gray_0/sources_1/new/rgb2gray.v,
+rgb2gray_0.v,verilog,xil_defaultlib,../../../../HDMI_RX.gen/sources_1/ip/rgb2gray_0/sim/rgb2gray_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
