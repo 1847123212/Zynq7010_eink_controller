@@ -1,0 +1,4 @@
+fifo_generator_0.v,verilog,xil_defaultlib,../../../ip/jarvis_dither_0/ip/fifo_generator_0/sim/fifo_generator_0.v,
+jarvis_dither.v,verilog,xil_defaultlib,../../../ip/jarvis_dither_0/new/jarvis_dither.v,
+jarvis_dither_0.v,verilog,xil_defaultlib,../../../ip/jarvis_dither_0/sim/jarvis_dither_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
