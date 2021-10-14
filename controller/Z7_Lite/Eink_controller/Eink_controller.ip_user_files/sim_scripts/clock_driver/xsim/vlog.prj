@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../ipstatic" \
+"../../../../Eink_controller.gen/sources_1/ip/clock_driver/clock_driver_clk_wiz.v" \
+"../../../../Eink_controller.gen/sources_1/ip/clock_driver/clock_driver.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
