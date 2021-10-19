@@ -1,0 +1,20 @@
+set_property SRC_FILE_INFO {cfile:c:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/HDMI_TX/hdmi_ip.srcs/sources_1/ip/clock/clock.xdc rfile:../../../hdmi_ip.srcs/sources_1/ip/clock/clock.xdc id:1 order:EARLY scoped_inst:inst_clock/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/HDMI_TX/hdmi_ip.srcs/constrs_1/new/top_pin.xdc rfile:../../../hdmi_ip.srcs/constrs_1/new/top_pin.xdc id:2} [current_design]
+current_instance inst_clock/inst
+set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
+set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.2
+current_instance
+set_property src_info {type:XDC file:2 line:3 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN N18 [get_ports clk]
+set_property src_info {type:XDC file:2 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN P16 [get_ports rst_n]
+set_property src_info {type:XDC file:2 line:10 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN T17 [get_ports hdmi_tx_clk_p]
+set_property src_info {type:XDC file:2 line:11 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V16 [get_ports {hdmi_tx_data_p[0]}]
+set_property src_info {type:XDC file:2 line:12 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W14 [get_ports {hdmi_tx_data_p[1]}]
+set_property src_info {type:XDC file:2 line:13 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN V17 [get_ports {hdmi_tx_data_p[2]}]
+set_property src_info {type:XDC file:2 line:20 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN W18 [get_ports out_en]
