@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../HDMI_RX.gen/sources_1/ip/gray2binarization_0/sources_1/new/gray2binarization.v" \
+"../../../../HDMI_RX.gen/sources_1/ip/gray2binarization_0/sim/gray2binarization_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

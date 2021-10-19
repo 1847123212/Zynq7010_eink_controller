@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"system_top_tb_time_synth.v" \
+"../../../../../HDMI_RX.srcs/sim_1/new/system_top_tb.v" \
+
+# Do not sort compile order
+nosort
