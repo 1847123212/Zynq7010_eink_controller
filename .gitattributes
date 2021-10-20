@@ -1,3 +1,5 @@
 # Auto detect text files and perform LF normalization
 #* text=auto
-*.VHDL linguist-vendored
+*.vhdl linguist-vendored
+*.html linguist-vendored
+*.systemverilog linguist-vendored
