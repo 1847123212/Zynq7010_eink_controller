@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 plt.rcParams['font.sans-serif'] = ['KaiTi'] # 指定默认字体
 plt.rcParams['axes.unicode_minus'] = False # 解决保存图像是负号'-'显示为方块的问题
 
-img_gray0 = cv2.imread("output.bmp", cv2.IMREAD_GRAYSCALE)
+img_gray0 = cv2.imread("david_head.jpg", cv2.IMREAD_GRAYSCALE)
 img_gray0 = 255 - img_gray0
 h, w= img_gray0.shape
 
