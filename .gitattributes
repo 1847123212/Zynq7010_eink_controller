@@ -3,5 +3,6 @@
 
 *.vhdl linguist-language=verilog
 *.systemverilog linguist-language=verilog
+*.v linguist-language=verilog
 
 *.html linguist-vendored
