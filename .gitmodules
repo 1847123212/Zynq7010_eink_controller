@@ -1,0 +1,3 @@
+[submodule "ALGO/Blue_Noise_Dithering/BlueNoise"]
+	path = ALGO/Blue_Noise_Dithering/BlueNoise
+	url = https://github.com/MomentsInGraphics/BlueNoise.git
