@@ -18,4 +18,6 @@ EBAZ4205控制板搭载的也是ZYNQ7010前段时间在咸鱼20元+10元邮费�
 屏幕驱动核心主要借鉴 👉[julbouln/ice40_eink_controller](https://github.com/julbouln/ice40_eink_controller)👈...我根本看不懂大佬写的啥...目前的屏幕控制器代码还是自己构架的QwQ
 
 ## 项目目标
+
 ### 将输入的图像输出到任意尺寸任意信号(8bit/16bit)的Eink墨水屏[❌]
+
