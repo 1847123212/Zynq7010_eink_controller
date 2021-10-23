@@ -16,7 +16,7 @@ V=size(GrayPic,2);%高
 
 for v=1:V
     for h=1:H
-        if(Texture(h,v)-1 >= GrayPic(h,v))
+        if(Texture(h,v) >= GrayPic(h,v))
             Dither(h,v) = 0;
         else
             Dither(h,v) = 1;
