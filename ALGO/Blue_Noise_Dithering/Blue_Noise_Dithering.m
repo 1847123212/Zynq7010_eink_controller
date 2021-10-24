@@ -1,11 +1,11 @@
 clear
 %读取待处理的图像
-GrayPic=imread('1024_1024_gray.png');
+GrayPic=imread('1024_1024.png');
 GrayPic=rgb2gray(GrayPic);%把RGB图像转化成灰度图像
 figure(1)
 imshow(GrayPic)
 %读取蓝噪纹理
-Blue_NoisePic=imread('LDR_LLL1_0.png');
+Blue_NoisePic=imread('L1.5.png');
 Blue_NoisePic=rgb2gray(Blue_NoisePic);%把RGB图像转化成灰度图像
 %抖动
 Dither=zeros(size(GrayPic,1));
@@ -16,7 +16,7 @@ V=size(GrayPic,2);%高
 
 for v=1:V
     for h=1:H
-        if(Texture(h,v) >= GrayPic(h,v))
+        if(Texture(h,v)-1 >= GrayPic(h,v))
             Dither(h,v) = 0;
         else
             Dither(h,v) = 1;
