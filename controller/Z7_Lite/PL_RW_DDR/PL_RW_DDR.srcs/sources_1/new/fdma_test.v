@@ -22,9 +22,9 @@ Signal description:
 
 module fdma_test#
     (
-    parameter TEST_MEM_SIZE   = 32'd40960,
-    parameter FDMA_BURST_LEN  = 16'd1024,
-    parameter ADDR_MEM_OFFSET = 1024*1024*500
+    parameter TEST_MEM_SIZE   = 32'd999999999,
+    parameter FDMA_BURST_LEN  = 16'd4,
+    parameter ADDR_MEM_OFFSET = 1024*1024
     )
     (
     input  wire         ui_clk,
@@ -105,7 +105,8 @@ module fdma_test#
                     fdma_wdata  <= 32'd0;
                 end
                 else if(fdma_wvalid) begin
-                    fdma_wdata <= fdma_wdata + 1'b1;
+                    //fdma_wdata <= fdma_wdata + 1'b1;
+                    fdma_wdata <= {128{1'b1}};
                 end
             end
 
@@ -125,7 +126,8 @@ module fdma_test#
                     fdma_waddr_r  <= fdma_waddr_r + ADDR_INC;
                 end
                 else if(fdma_rvalid) begin
-                    fdma_rcnt <= fdma_rcnt + 1'b1;
+                    //fdma_rcnt <= fdma_rcnt + 1'b1;
+                    fdma_rcnt <= {128{1'b1}};
                 end
             end
             default:

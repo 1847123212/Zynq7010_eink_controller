@@ -31,6 +31,7 @@
   "../../../bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.v" \
   "../../../bd/system/ipshared/4d18/uiFDMA.v" \
   "../../../bd/system/ip/system_uiFDMA_0_0/sim/system_uiFDMA_0_0.v" \
+  "../../../bd/system/sim/system.v" \
 -endlib
 -makelib xcelium_lib/axi_register_slice_v2_1_22 \
   "../../../../PL_RW_DDR.gen/sources_1/bd/system/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v" \
@@ -74,7 +75,6 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/system/ip/system_auto_ds_0/sim/system_auto_ds_0.v" \
   "../../../bd/system/ip/system_auto_pc_0/sim/system_auto_pc_0.v" \
-  "../../../bd/system/sim/system.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

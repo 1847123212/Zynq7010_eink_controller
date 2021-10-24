@@ -1,4 +1,4 @@
-15:39:53 **** Build of configuration Debug for project test ****
+19:35:31 **** Incremental Build of configuration Debug for project test ****
 make all 
 C:/Xilinx/Vitis/2020.2/gnuwin/bin/make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -26,5 +26,5 @@ arm-none-eabi-size test.elf  |tee "test.elf.size"
 'Finished building: test.elf.size'
 ' '
 
-15:39:58 Build Finished (took 4s.294ms)
+19:35:41 Build Finished (took 9s.692ms)
 

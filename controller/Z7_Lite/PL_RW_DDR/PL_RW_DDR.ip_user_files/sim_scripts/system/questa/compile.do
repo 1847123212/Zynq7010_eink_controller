@@ -64,6 +64,7 @@ vlog -work xil_defaultlib  "+incdir+../../../../PL_RW_DDR.gen/sources_1/bd/syste
 "../../../bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0.v" \
 "../../../bd/system/ipshared/4d18/uiFDMA.v" \
 "../../../bd/system/ip/system_uiFDMA_0_0/sim/system_uiFDMA_0_0.v" \
+"../../../bd/system/sim/system.v" \
 
 vlog -work axi_register_slice_v2_1_22  "+incdir+../../../../PL_RW_DDR.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../PL_RW_DDR.gen/sources_1/bd/system/ipshared/34f8/hdl" "+incdir+../../../../PL_RW_DDR.gen/sources_1/bd/system/ipshared/d0f7" "+incdir+C:/Xilinx/Vivado/2020.2/data/xilinx_vip/include" \
 "../../../../PL_RW_DDR.gen/sources_1/bd/system/ipshared/af2c/hdl/axi_register_slice_v2_1_vl_rfs.v" \
@@ -107,7 +108,6 @@ vlog -work axi_dwidth_converter_v2_1_22  "+incdir+../../../../PL_RW_DDR.gen/sour
 vlog -work xil_defaultlib  "+incdir+../../../../PL_RW_DDR.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../PL_RW_DDR.gen/sources_1/bd/system/ipshared/34f8/hdl" "+incdir+../../../../PL_RW_DDR.gen/sources_1/bd/system/ipshared/d0f7" "+incdir+C:/Xilinx/Vivado/2020.2/data/xilinx_vip/include" \
 "../../../bd/system/ip/system_auto_ds_0/sim/system_auto_ds_0.v" \
 "../../../bd/system/ip/system_auto_pc_0/sim/system_auto_pc_0.v" \
-"../../../bd/system/sim/system.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

@@ -16,3 +16,40 @@ platform write
 platform generate -domains 
 platform active {Hello_world}
 platform generate
+platform active {Hello_world}
+platform config -updatehw {C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/system_wrapper.xsa}
+domain active {zynq_fsbl}
+bsp reload
+catch {bsp regenerate}
+platform generate
+platform config -updatehw {C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/system_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/system_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/system_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/system_wrapper.xsa}
+platform generate -domains 
+platform active {Hello_world}
+platform generate
+platform config -updatehw {C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/system_wrapper.xsa}
+bsp reload
+bsp write
+catch {bsp regenerate}
+domain active {standalone_domain}
+bsp reload
+bsp setlib -name xilffs -ver 4.4
+bsp write
+bsp reload
+catch {bsp regenerate}
+bsp reload
+bsp write
+bsp config use_lfn "1"
+bsp write
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_domain,zynq_fsbl 
+bsp reload
+domain active {zynq_fsbl}
+bsp config use_lfn "0"
+bsp reload

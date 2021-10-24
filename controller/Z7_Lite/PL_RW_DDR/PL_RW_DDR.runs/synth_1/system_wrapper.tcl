@@ -89,7 +89,7 @@ set_property ip_output_repo c:/Users/Admin/Desktop/Zynq7010_eink_controller/cont
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-add_files C:/Users/Admin/Desktop/Zynq7010_eink_controller/ALGO/Initialize_coe/img.coe
+add_files C:/Users/Admin/Desktop/Zynq7010_eink_controller/ALGO/Initialize_coe/DITHER/img.coe
 read_verilog -library xil_defaultlib {
   C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.srcs/sources_1/new/fdma_test.v
   C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/PL_RW_DDR/PL_RW_DDR.srcs/sources_1/new/system_wrapper_fdma.v
