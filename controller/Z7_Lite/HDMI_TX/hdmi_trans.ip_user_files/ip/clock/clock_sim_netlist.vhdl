@@ -1,10 +1,10 @@
--- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Mon Jun 29 16:59:14 2020
--- Host        : DESKTOP-8PAFVVI running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+-- Date        : Sun Oct 24 07:38:50 2021
+-- Host        : Duller running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               E:/demo/Z7-Lite/FPGA/Lab11_FPGA_hdmi_img/hdmi_trans.runs/clock_synth_1/clock_sim_netlist.vhdl
+--               C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/HDMI_TX/hdmi_trans.runs/clock_synth_1/clock_sim_netlist.vhdl
 -- Design      : clock
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.

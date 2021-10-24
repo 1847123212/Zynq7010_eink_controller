@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Fri Oct 22 15:42:51 2021
+// Date        : Sun Oct 24 07:34:08 2021
 // Host        : Duller running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/Lab11_FPGA_hdmi_img/hdmi_trans.runs/rgb2gray_0_synth_1/rgb2gray_0_stub.v
+//               C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Z7_Lite/HDMI_TX/hdmi_trans.runs/rgb2gray_0_synth_1/rgb2gray_0_stub.v
 // Design      : rgb2gray_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

@@ -33,9 +33,9 @@ module tb();
         forever #(10) clk = ~clk;
     end
     initial begin
-        rst_n <= 1;
-        repeat(3000) @(posedge clk);
         rst_n <= 0;
+        repeat(3000) @(posedge clk);
+        rst_n <= 1;
     end
 
 endmodule
