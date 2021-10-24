@@ -1,9 +1,9 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"3.07786",
-   "Default View_TopLeft":"315,132",
+   "Default View_ScaleFactor":"2.40805",
+   "Default View_TopLeft":"27,-73",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port TMDS_IN -pg 1 -lvl 0 -x -10 -y 120 -defaultsOSRD
 preplace port HDMI_EDID -pg 1 -lvl 5 -x 1170 -y 170 -defaultsOSRD
