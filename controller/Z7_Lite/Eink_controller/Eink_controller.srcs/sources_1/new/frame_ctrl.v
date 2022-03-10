@@ -124,7 +124,7 @@ module frame_ctrl
 
                 SKV_DONE:begin
                     SKV       <= 0;
-                    end_flag   <= 0;
+                    end_flag  <= 0;
                     cnt_n_skv <= 0;
                     cnt_t_skv <= 0;
                     SKV_STATE <= 0;
