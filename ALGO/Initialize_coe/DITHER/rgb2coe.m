@@ -1,16 +1,55 @@
 clear
-RGBPic=imread('img.png');
-%figure(1)
-imshow(RGBPic)
-GrayPic=rgb2gray(RGBPic);%把RGB图像转化成灰度图像
-%figure(2)
-imshow(GrayPic);
-DPic = dither(GrayPic);
-%figure(3)
+RGBPic=imread('img1.png');
+
+GrayPic=im2gray(RGBPic);%把RGB图像转化成灰度图像
+
+H=size(GrayPic,2);%宽
+V=size(GrayPic,1);%高
+
+BlueNoisePic=imread('..\..\Blue_Noise_Dithering\T128_L0.5_2208x1872\texture.png');
+BlueNoisePic=im2gray(BlueNoisePic);%把RGB图像转化成灰度图像
+%误差扩散抖动
+EDPic = dither(GrayPic);
+figure(1)
+imshow(EDPic)
+
+%傅里叶变换
+EDPic=im2double(EDPic);
+BF=fft2(EDPic);
+BF=fftshift(BF);
+BF=abs(BF);
+T=log(BF+1);
+figure;
+figure(2)
+imshow(T,[]);
+
+%蓝噪声有序抖动
+DPic=zeros(size(GrayPic,1));%创建矩阵
+
+for v=1:V%实现抖动算法
+    for h=1:H
+        if(BlueNoisePic(v,h)-1 >= GrayPic(v,h))
+            DPic(v,h) = 0;
+        else
+            DPic(v,h) = 1;
+        end
+    end
+end
+
+figure(3)
 imshow(DPic)
 
-H=1200;%宽
-V=825;%高
+
+%傅里叶变换
+BDPic=im2double(DPic);
+BF=fft2(BDPic);
+BF=fftshift(BF);
+BF=abs(BF);
+T=log(BF+1);
+figure;
+figure(4)
+imshow(T,[]);
+
 
 uint8 DPicN(V,H/4);%定义一个300*825深度为8位的矩阵
 

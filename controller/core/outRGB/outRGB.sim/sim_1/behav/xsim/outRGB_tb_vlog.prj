@@ -1,0 +1,15 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../outRGB.gen/sources_1/ip/clk_wiz_0" \
+"../../../../outRGB.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../../outRGB.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../outRGB.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
+"../../../../outRGB.srcs/sources_1/new/outRGB.v" \
+"../../../../outRGB.srcs/sources_1/new/rd_image.v" \
+"../../../../outRGB.srcs/sources_1/new/vga_shift.v" \
+"../../../../outRGB.srcs/sim_1/new/outRGB_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

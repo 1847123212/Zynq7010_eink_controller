@@ -23,4 +23,6 @@ EBAZ4205控制板搭载的也是ZYNQ7010前段时间在咸鱼20元+10元邮费�
 
 ### 将输入的图像输出到任意尺寸任意信号(8bit/16bit)的Eink墨水屏[❌]
 
+由于学业原因，目前项目仅完成ED097TC2驱动
+
 clone不了请用 https://gitee.com/Hanley-Yao/Zynq7010_eink_controller.git

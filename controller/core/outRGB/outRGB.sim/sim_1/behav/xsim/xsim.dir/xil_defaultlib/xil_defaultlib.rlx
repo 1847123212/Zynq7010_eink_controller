@@ -1,0 +1,12 @@
+0.7
+2020.2
+Nov 18 2020
+09:47:47
+C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v,1635680369,verilog,,C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,,blk_mem_gen_0,,,../../../../outRGB.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,1635680371,verilog,,C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/outRGB.v,,clk_wiz_0,,,../../../../outRGB.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v,1635680371,verilog,,C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v,,clk_wiz_0_clk_wiz,,,../../../../outRGB.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.sim/sim_1/behav/xsim/glbl.v,1605673889,verilog,,,,glbl,,,,,,,,
+C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sim_1/new/outRGB_tb.v,1635686486,verilog,,,,outRGB_tb,,,../../../../outRGB.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/outRGB.v,1637493471,verilog,,C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/rd_image.v,,outRGB,,,../../../../outRGB.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/rd_image.v,1635679403,verilog,,C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/vga_shift.v,,rd_image,,,../../../../outRGB.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/vga_shift.v,1635678973,verilog,,C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sim_1/new/outRGB_tb.v,,vga_shift,,,../../../../outRGB.gen/sources_1/ip/clk_wiz_0,,,,,
