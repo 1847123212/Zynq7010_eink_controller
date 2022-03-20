@@ -25,7 +25,7 @@
 
 三年前，他拥有了第一块9.7寸电子墨水屏幕以及一片来着微雪的IT8951。
 
-他一直有一个小小的梦想~用那块刷新慢悠悠的墨水屏看番！
+他一直有一个小小的梦想~用那块刷新慢悠悠的墨水屏玩《Minecraft》
 
 他从一个连游戏都不会安装的少年从零开始。花了三年，从Win上位机通过USB控制IT8951做到0.5FPS刷新到使用树莓派控制IT8951实现4FPS刷新👉[Hanley-Yao/IT8951_E-paper_Display_Demo: 树莓派上的IT8951 E-paper演示程序 (github.com)](https://github.com/Hanley-Yao/IT8951_E-paper_Display_Demo)👈最后在多方帮助下学了一些FPGA实现了他人生第一个FPGA项目Zynq7010_eink_controller，他终于实现了三年前的梦想！
 
