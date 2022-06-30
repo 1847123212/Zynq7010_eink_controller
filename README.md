@@ -185,4 +185,4 @@ ALGO\Initialize_coe\DITHER\rgb2coe.m Matlab可以仿真FPGA处理的结果
 
 ### 将输入的图像输出到任意尺寸任意信号(8bit/16bit)的Eink墨水屏[❌]
 
-clone不了请用 https://gitee.com/Hanley-Yao/Zynq7010_eink_controller.git
+clone不了请用 https://gitee.com/Hanley-Yao/Zynq7010_eink_controller
