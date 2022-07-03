@@ -162,7 +162,7 @@ ALGO\Initialize_coe\DITHER\rgb2coe.m Matlab可以仿真FPGA处理的结果
 | 20210126<br/>- 使用Zynq7010+ADV7611实现了HDMI视频采集并通过蓝噪声纹理处理后显示，但是画面模糊闪烁<br/>- 经过排查FPGA输出的时序并没有出现错误，最后发现是测试PCB走线太长而FPGA的IO本身驱动能力较弱导致的。目前已经着手重新绘制PCB用于接下来的测试工作<br/>- 对大面积高速刷新的屏幕面板而言，目前的电源方案TPS65185实际上功率有一些不足了，但是由于功率更高的供电方案价格和复杂度也有提升，时间紧迫就延用TPS65185作为电源供电。如果读者您有能力时间与精力欢迎加入我的项目！ |
 | 20210116<br/>- 通过ADV7611实现了HDMI RX 分辨率1080P 60Hz     |
 | 20220107<br/>- 嗯...Zynq7020只能做到720P HDMI RX...果然还是得外挂接收芯片,目前考虑ADV7611或者IT6802 |
-| 20211221<br/>- 视频输出测试成功...不过数据时序不太匹配还需要优化<br/>-实验记录：<br/>-FPGA：microphase z7-lite zynq7010 (坏的![img](http://qzonestyle.gtimg.cn/qzone/em/e252.png))<br/>-Power：TPS65185 (坏的![img](http://qzonestyle.gtimg.cn/qzone/em/e252.png))<br/>-Tool：vivado 2020.2<br/>-XCL：50Mhz 一帧刷十个波形周期<br/>-图像处理算法：蓝噪声抖动(Blue Noise Dithering)<br/>-蓝噪声纹理1024*1024 标准差1.5<br/>![image](./log/20211221/20211221_IMG_1.JPG) |
+| 20211221<br/>- 视频输出测试成功...不过数据时序不太匹配还需要优化<br/>-实验记录：<br/>-FPGA：microphase z7-lite zynq7010<br/>-Power：TPS65185 <br/>-Tool：vivado 2020.2<br/>-XCL：50Mhz 一帧刷十个波形周期<br/>-图像处理算法：蓝噪声抖动(Blue Noise Dithering)<br/>-蓝噪声纹理1024*1024 标准差1.5<br/>![image](./log/20211221/20211221_IMG_1.JPG) |
 | 20211220<br/>-还需要再写亿点点代码，然后上板子，然后烧几个IC烧几片屏...大概就能成啦<br/>![image](./log/20211220/20211220_IMG_3.JPG) |
 | 20211218<br/>-EINK控制器之...(4.5/6)<br/>-并行移位数据控制器<br/>-另外帧控制器可能得重写...虽然能用但是写的真的太烂了![image](./log/20211218/20211218_IMG_1.JPG)<br/>![image](./log/20211218/20211218_IMG_2.JPG) |
 | 20211212<br/>- 目前直接把抖动噪声转换成C矩阵直接用JTAG传输到ARM后转存到DDR的Texture缓冲区暂时解决，不过这样导致了上传程序需要较长时间...![image](./log/20211212/20211212_IMG_1.JPG) |
