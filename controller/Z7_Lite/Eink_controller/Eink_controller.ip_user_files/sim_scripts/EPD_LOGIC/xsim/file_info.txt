@@ -1,2 +1,0 @@
-EPD_LOGIC.v,verilog,xil_defaultlib,../../../../Eink_controller.gen/sources_1/ip/EPD_LOGIC/sim/EPD_LOGIC.v,incdir="../../../../Eink_controller.gen/sources_1/ip/EPD_LOGIC/hdl/verilog"
-glbl.v,Verilog,xil_defaultlib,glbl.v
