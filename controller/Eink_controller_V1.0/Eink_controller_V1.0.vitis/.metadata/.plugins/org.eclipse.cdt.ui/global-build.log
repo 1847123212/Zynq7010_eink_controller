@@ -1,0 +1,9 @@
+Nothing to build in platform 'ps_system'
+
+22:08:41 **** Incremental Build of configuration Debug for project frame_buffer ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.

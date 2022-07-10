@@ -1,0 +1,817 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.01, Jan 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/Eink_controller_V1.0/Eink_controller_V1.0.sim/sim_1/behav/questa
+vaddr_sw
+Z1 !s10a 1647151428
+Z2 !s110 1653119018
+!i10b 1
+!s100 Dk>][P:^I75lZa=>1CEfg1
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IA>8R]_O_1>2BTHEieYYm33
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z5 w1647151428
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/addr_sw.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/addr_sw.v
+!i122 0
+L0 2 54
+Z6 OL;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1653119018.000000
+Z8 !s107 ../../../../Eink_controller_V1.0.srcs/sim_1/new/eink_controller_ed108_tb.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_wgray_buf.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_wdata_buf.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_rgray_buf.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_rdata_buf.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_cdc_async_rst_n.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/v_algo.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/tps65185_ctrl.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/system_mgr.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/sync_h2lck.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/level2pulse.v|../../../../Eink_controller_V1.0.srcs/sim_1/new/image_scr.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/iic_config_ed108.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/i2c_top.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_timing.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_processor.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_ctrl.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_w_gray.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_w_data.v|../../../../Eink_controller_V1.0.srcs/sim_1/new/fdma_sim_slave.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_r_gray.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_r_data.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_clear.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/eink_controller_ebaz4205_ed108.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/display_mgr.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/delay_cnt.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/data_mgr.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/config_reg_ed108.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/addr_sw.v|../../../../Eink_controller_V1.0.gen/sources_1/ip/clock_pll/clock_pll.v|../../../../Eink_controller_V1.0.gen/sources_1/ip/clock_pll/clock_pll_clk_wiz.v|
+Z9 !s90 -incr|-work|xil_defaultlib|+incdir+../../../../Eink_controller_V1.0.gen/sources_1/bd/ps_system/ipshared/ec67/hdl|+incdir+../../../../Eink_controller_V1.0.gen/sources_1/bd/ps_system/ipshared/34f8/hdl|+incdir+../../../../Eink_controller_V1.0.gen/sources_1/ip/clock_pll|+incdir+C:/Xilinx/Vivado/2020.2/data/xilinx_vip/include|../../../../Eink_controller_V1.0.gen/sources_1/ip/clock_pll/clock_pll_clk_wiz.v|../../../../Eink_controller_V1.0.gen/sources_1/ip/clock_pll/clock_pll.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/addr_sw.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/config_reg_ed108.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/data_mgr.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/delay_cnt.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/display_mgr.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/eink_controller_ebaz4205_ed108.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_clear.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_r_data.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_r_gray.v|../../../../Eink_controller_V1.0.srcs/sim_1/new/fdma_sim_slave.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_w_data.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_w_gray.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_ctrl.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_processor.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_timing.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/i2c_top.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/iic_config_ed108.v|../../../../Eink_controller_V1.0.srcs/sim_1/new/image_scr.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/level2pulse.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/sync_h2lck.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/system_mgr.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/tps65185_ctrl.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/v_algo.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_cdc_async_rst_n.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_rdata_buf.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_rgray_buf.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_wdata_buf.v|../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_wgray_buf.v|../../../../Eink_controller_V1.0.srcs/sim_1/new/eink_controller_ed108_tb.v|
+!i113 0
+Z10 o-work xil_defaultlib -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z11 !s92 -work xil_defaultlib +incdir+../../../../Eink_controller_V1.0.gen/sources_1/bd/ps_system/ipshared/ec67/hdl +incdir+../../../../Eink_controller_V1.0.gen/sources_1/bd/ps_system/ipshared/34f8/hdl +incdir+../../../../Eink_controller_V1.0.gen/sources_1/ip/clock_pll +incdir+C:/Xilinx/Vivado/2020.2/data/xilinx_vip/include -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z12 tCvgOpt 0
+vclock_pll
+Z13 !s10a 1653118563
+R2
+!i10b 1
+!s100 hObQTHY1JOH7FM;7<41HI3
+R3
+IRW<K?z?^5ig0h91W8LGZR0
+R4
+R0
+Z14 w1653118563
+8../../../../Eink_controller_V1.0.gen/sources_1/ip/clock_pll/clock_pll.v
+F../../../../Eink_controller_V1.0.gen/sources_1/ip/clock_pll/clock_pll.v
+!i122 0
+L0 71 25
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vclock_pll_clk_wiz
+R13
+R2
+!i10b 1
+!s100 2]`XHI9bDj==Y5^MT:W3S2
+R3
+IXm2oWW>ldHE5A?JkI`A6?3
+R4
+R0
+R14
+8../../../../Eink_controller_V1.0.gen/sources_1/ip/clock_pll/clock_pll_clk_wiz.v
+F../../../../Eink_controller_V1.0.gen/sources_1/ip/clock_pll/clock_pll_clk_wiz.v
+!i122 0
+L0 69 124
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vconfig_reg_ed108
+!s10a 1653111329
+R2
+!i10b 1
+!s100 c`US[?Mee>NfNS5lNY57^0
+R3
+ICNDYcMBX^`2:ED?_La7Oi1
+R4
+R0
+w1653111329
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/config_reg_ed108.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/config_reg_ed108.v
+!i122 0
+L0 2 211
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vdata_mgr
+R1
+R2
+!i10b 1
+!s100 7c2o7Dd<o4WzZhXE<GAk_0
+R3
+IBJ0o=EVNQ7o]cKBdGQX_00
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/data_mgr.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/data_mgr.v
+!i122 0
+L0 8 77
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vdelay_cnt
+R1
+R2
+!i10b 1
+!s100 N_1hLQN=nc0^D??iEH3P>2
+R3
+I;=BoG_kKS7HnTRRcA_San0
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/delay_cnt.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/delay_cnt.v
+!i122 0
+L0 1 39
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vdisplay_mgr
+!s10a 1653053926
+R2
+!i10b 1
+!s100 >k>^17h6gJBzC1D@G>:fd0
+R3
+IP3KRJ?[e?HzkifPXh3ogM2
+R4
+R0
+w1653053926
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/display_mgr.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/display_mgr.v
+!i122 0
+L0 8 184
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+veink_controller_ed108
+!s10a 1653119557
+!s110 1653119581
+!i10b 1
+!s100 OJ0BGj^jKb[XfjmibUzF52
+R3
+IBa>];]0_=:YDg=_mJOblj1
+R4
+R0
+w1653119557
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/eink_controller_ebaz4205_ed108.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/eink_controller_ebaz4205_ed108.v
+!i122 4
+L0 2 271
+R6
+r1
+!s85 0
+31
+!s108 1653119580.000000
+R8
+R9
+!i113 0
+R10
+R11
+R12
+veink_controller_ed108_tb
+!s110 1653119955
+!i10b 1
+!s100 Kb1:bdI6HIA1_UjjWmRm]3
+R3
+IGhRkd0];JKzX16f2_HBfh1
+R4
+R0
+w1653119934
+8../../../../Eink_controller_V1.0.srcs/sim_1/new/eink_controller_ed108_tb.v
+F../../../../Eink_controller_V1.0.srcs/sim_1/new/eink_controller_ed108_tb.v
+!i122 6
+L0 5 150
+R6
+r1
+!s85 0
+31
+!s108 1653119955.000000
+R8
+R9
+!i113 0
+R10
+R11
+R12
+Teink_controller_ed108_tb_opt
+!s110 1653119961
+VS0[=S6HTfXVh6RfX@^eX]2
+04 24 4 work eink_controller_ed108_tb fast 0
+04 4 4 work glbl fast 0
+o+acc=npr -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm -work xil_defaultlib
+R12
+neink_controller_ed108_tb_opt
+OL;O;2020.1;71
+vfdma_clear
+R1
+R2
+!i10b 1
+!s100 QdXblb_oWnBeDVa][3mnG2
+R3
+IU::;0`3a3BDBE2CPm>a^V3
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_clear.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_clear.v
+!i122 0
+L0 8 174
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vfdma_r_data
+R1
+R2
+!i10b 1
+!s100 EPoYO[o9IPG4Z2el2^Te61
+R3
+InD6KZJc02P;L[g]8=:;1c3
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_r_data.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_r_data.v
+!i122 0
+L0 28 129
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vfdma_r_gary
+!s10a 1653010396
+R2
+!i10b 1
+!s100 lbYYONYMG_H8j<k0fKmTR1
+R3
+IiJ90LgkfCdX]8`?M[3nKK3
+R4
+R0
+w1653010396
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_r_gray.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_r_gray.v
+!i122 0
+L0 27 127
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vfdma_sim_slave
+R1
+R2
+!i10b 1
+!s100 7:mbAh0j1R[6JMYG[g@a]3
+R3
+I;S;]^4?e`AkR`8>JhBNNU3
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sim_1/new/fdma_sim_slave.v
+F../../../../Eink_controller_V1.0.srcs/sim_1/new/fdma_sim_slave.v
+!i122 0
+L0 9 153
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vfdma_w_data
+R1
+R2
+!i10b 1
+!s100 dREMUI]R`aneT@>AE6>C23
+R3
+I6ETGDFi[2`8MCU`8N?zlC1
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_w_data.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_w_data.v
+!i122 0
+L0 27 292
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vfdma_w_gray
+R1
+R2
+!i10b 1
+!s100 z78O]WIKS>0D3Zlg^[8Md1
+R3
+II>3^a7JjRl6>cD^>A>Nf83
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_w_gray.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/fdma_w_gray.v
+!i122 0
+L0 28 291
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vframe_ctrl
+R1
+R2
+!i10b 1
+!s100 ?28Clb5`bQPZ43bHjTJCo2
+R3
+I?z>DG11RFh56zZ^ab46lo2
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_ctrl.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_ctrl.v
+!i122 0
+L0 2 447
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vframe_processor
+!s10a 1653118682
+R2
+!i10b 1
+!s100 aMz_^N^Ae5XRbVR9G>OoH2
+R3
+IUnfQgB4C@`z_9HMFKYL<T3
+R4
+R0
+w1653118682
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_processor.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_processor.v
+!i122 0
+L0 8 500
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vframe_timing
+R1
+R2
+!i10b 1
+!s100 :okP0CY_m^]b=fHMT3k_?0
+R3
+IfBj?VELHh5Q<onjRdS_<a1
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_timing.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/frame_timing.v
+!i122 0
+L0 151 79
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vglbl
+!s110 1653119956
+!i10b 1
+!s100 ZHmTNm_h3dd`6mIQLzSUN3
+R3
+IJT>_:<WW6a7KP^k3<8E3=1
+R4
+R0
+w1605673889
+8glbl.v
+Fglbl.v
+!i122 7
+L0 6 78
+R6
+r1
+!s85 0
+31
+!s108 1653119956.000000
+!s107 glbl.v|
+!s90 -work|xil_defaultlib|glbl.v|
+!i113 0
+R10
+R12
+vi2c_top
+R1
+R2
+!i10b 1
+!s100 GKB1FUGBe>?mZ>DJ]KG@H2
+R3
+I@7NiL]]cOl==Sm^eCBjR`2
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/i2c_top.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/i2c_top.v
+!i122 0
+L0 2 200
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+viic_config_ed108
+!s10a 1653111532
+R2
+!i10b 1
+!s100 MbjngD:bYl>1?KjDGVg8A0
+R3
+IPh6W]cUh8SH?g@F=[QEJ<0
+R4
+R0
+w1653111532
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/iic_config_ed108.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/iic_config_ed108.v
+!i122 0
+L0 9 98
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vimage_src
+!s10a 1653118987
+R2
+!i10b 1
+!s100 T:SH<[0TnM5^S5z8W_Q7B1
+R3
+IH:m]IN4POYc];=4QVZDXV0
+R4
+R0
+w1653118987
+8../../../../Eink_controller_V1.0.srcs/sim_1/new/image_scr.v
+F../../../../Eink_controller_V1.0.srcs/sim_1/new/image_scr.v
+!i122 0
+L0 13 129
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vlevel2pulse
+R1
+R2
+!i10b 1
+!s100 O]HE7=>Cc8PVaO@PHNJL13
+R3
+IhJ1QUmU8lIoz`aN15EYo[0
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/level2pulse.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/level2pulse.v
+!i122 0
+L0 2 35
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vsync_h2lck
+R1
+R2
+!i10b 1
+!s100 jaXLc<VbfAZCNB6lI;@@62
+R3
+I]1T<0TQ>?coSn=onAJ8@:3
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/sync_h2lck.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/sync_h2lck.v
+!i122 0
+L0 9 32
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vsystem_mgr
+R1
+R2
+!i10b 1
+!s100 706b1@:ocYXm]?Rk=RO7]3
+R3
+I65Ga]=WQ]FSRWW_[PQhmH3
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/system_mgr.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/system_mgr.v
+!i122 0
+L0 8 192
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vtps65185_ctrl
+R1
+R2
+!i10b 1
+!s100 8_6MI071AX9mhDjAF4>0>1
+R3
+I3hGi5BCjPENa>07kEQ``K1
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/tps65185_ctrl.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/tps65185_ctrl.v
+!i122 0
+L0 2 30
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vv_algo
+R1
+R2
+!i10b 1
+!s100 XoUeE;e2B5b><N_RG02R:3
+R3
+I>?lJjV0lJKF:mbnN:M4kY3
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/v_algo.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/v_algo.v
+!i122 0
+L0 16 84
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vxpm_cdc_async_rst_n
+R1
+R2
+!i10b 1
+!s100 Tn1??d3AfoeRKd;Z4RNBj2
+R3
+IF<fdLZfWW[_10O2hm^K:J2
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_cdc_async_rst_n.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_cdc_async_rst_n.v
+!i122 0
+L0 2 26
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vxpm_fifo_rdata_buf
+R1
+R2
+!i10b 1
+!s100 Hmn6AeMLACoKmbOEiVV<I0
+R3
+IKAe7d:6KN4;^jNH`8PoTF3
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_rdata_buf.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_rdata_buf.v
+!i122 0
+L0 8 79
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vxpm_fifo_rgray_buf
+R1
+R2
+!i10b 1
+!s100 bW3zm@FoDALOa6JXPRg0@0
+R3
+IiV4:3CNdkDdW]Pel5T9XX3
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_rgray_buf.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_rgray_buf.v
+!i122 0
+Z15 L0 8 75
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vxpm_fifo_wdata_buf
+R1
+R2
+!i10b 1
+!s100 PWLK?D3CG_cM[66U8IM2?3
+R3
+I2_:EPWKE3[@NzU5VdmhGA1
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_wdata_buf.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_wdata_buf.v
+!i122 0
+R15
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12
+vxpm_fifo_wgray_buf
+R1
+R2
+!i10b 1
+!s100 ^FD4X1BGaRIBG@AX:dFF40
+R3
+IEKJUULI^7L27mQPO[^6`;1
+R4
+R0
+R5
+8../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_wgray_buf.v
+F../../../../Eink_controller_V1.0.srcs/sources_1/new/xpm_fifo_wgray_buf.v
+!i122 0
+L0 8 78
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+R12

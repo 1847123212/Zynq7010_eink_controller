@@ -1,0 +1,17 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.gen/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/outRGB.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module outRGB
+INFO: [VRFC 10-2458] undeclared symbol locked, assumed default net type wire [C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/outRGB.v:47]
+INFO: [VRFC 10-2458] undeclared symbol rd_req, assumed default net type wire [C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/outRGB.v:55]
+INFO: [VRFC 10-2458] undeclared symbol rd_ren, assumed default net type wire [C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/outRGB.v:70]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/rd_image.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rd_image
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new/vga_shift.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_shift
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sim_1/new/outRGB_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module outRGB_tb

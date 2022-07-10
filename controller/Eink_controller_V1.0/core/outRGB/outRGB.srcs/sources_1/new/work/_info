@@ -1,0 +1,81 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.01, Jan 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Admin/Desktop/Zynq7010_eink_controller/controller/core/outRGB/outRGB.srcs/sources_1/new
+voutRGB
+!s110 1640442640
+!i10b 1
+!s100 Race]goYTVSm[E>Ye_@832
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Iz6C;OD_=[3bf`3131D9FP0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1640442640
+8c:\users\admin\appdata\local\temp\tmpto3k2p.v
+Fc:\users\admin\appdata\local\temp\tmpto3k2p.v
+!i122 2
+L0 23 58
+Z3 OL;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1640442640.000000
+!s107 c:\users\admin\appdata\local\temp\tmpto3k2p.v|
+!s90 c:\users\admin\appdata\local\temp\tmpto3k2p.v|
+!i113 0
+Z4 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 tCvgOpt 0
+nout@r@g@b
+vrd_image
+!s110 1640442495
+!i10b 1
+!s100 `QV<T5c0DeHcGk3AII[da2
+R1
+I=Z<OFgfXSG35^kL8FPGeD0
+R2
+R0
+w1640442495
+8c:\users\admin\appdata\local\temp\tmpbg_q_9.v
+Fc:\users\admin\appdata\local\temp\tmpbg_q_9.v
+!i122 0
+L0 45 39
+R3
+r1
+!s85 0
+31
+!s108 1640442495.000000
+!s107 c:\users\admin\appdata\local\temp\tmpbg_q_9.v|
+!s90 c:\users\admin\appdata\local\temp\tmpbg_q_9.v|
+!i113 0
+R4
+R5
+vvga_shift
+!s110 1640442586
+!i10b 1
+!s100 D@TE^0TG`9YNH:o1GFJFe1
+R1
+I_T9TfaF6VST2?b5l99=KX1
+R2
+R0
+w1640442586
+8c:\users\admin\appdata\local\temp\tmprc5pua.v
+Fc:\users\admin\appdata\local\temp\tmprc5pua.v
+!i122 1
+L0 46 196
+R3
+r1
+!s85 0
+31
+!s108 1640442586.000000
+!s107 c:\users\admin\appdata\local\temp\tmprc5pua.v|
+!s90 c:\users\admin\appdata\local\temp\tmprc5pua.v|
+!i113 0
+R4
+R5
