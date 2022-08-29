@@ -1,5 +1,11 @@
 # Zynq7010_eink_controller
 
+## 项目目标
+
+### 将输入的图像输出到任意尺寸任意信号(8bit/16bit)的Eink墨水屏[20220829✔]
+
+clone不了请用 https://gitee.com/Hanley-Yao/Zynq7010_eink_controller 
+
 ### 20220311 发布正式版 Eink 控制器 V1.0 现仅测试ED097TC2刷新...稳定快速√
 
 ### 由于学业原因项目暂停更新 见谅~
@@ -32,8 +38,6 @@
 他一直有一个小小的梦想~用那块刷新慢悠悠的墨水屏玩《Minecraft》
 
 他从一个连游戏都不会安装的少年从零开始。花了三年，从Win上位机通过USB控制IT8951做到0.5FPS刷新到使用树莓派控制IT8951实现4FPS刷新👉[Hanley-Yao/IT8951_E-paper_Display_Demo: 树莓派上的IT8951 E-paper演示程序 (github.com)](https://github.com/Hanley-Yao/IT8951_E-paper_Display_Demo)👈最后在多方帮助下学了一些FPGA实现了他人生第一个FPGA项目Zynq7010_eink_controller，他终于实现了三年前的梦想！
-
-![image](./log/20220311/20220311_IMG_1.JPG)
 
 因为热爱，可迎万难。虽然他知道自己很菜，但是他总能硬着头皮上，总会开口向大佬请教，但也总会浪费money...
 
@@ -149,6 +153,9 @@ ALGO\Initialize_coe\DITHER\rgb2coe.m Matlab可以仿真FPGA处理的结果
 
 | Log                                                          |
 | ------------------------------------------------------------ |
+| 20220829<br/>![image](./log/20220829/20220829_IMG_1.JPG)     |
+| -飞了个0R电阻成功点亮ES108FC1<br/>![image](./log/20220818/20220818_IMG_2.JPG) |
+| 20220816<br/>-电源上下电时序控制<br/>![image](./log/20220816/20220816_IMG_1.JPG)<br/>![image](./log/20220816/20220816_IMG_2.JPG) |
 | 20220517<br/>- 由于 Z7-Lite 损坏，因此更换主控为 EBAZ4205 进行部分测试<br/>![image](./log/20220517/20220517_IMG_1.JPG) |
 | 20220311<br/>- 发布正式版V1.0<br/>![image](./log/20220311/20220311_IMG_2.JPG)<br/>![image](./log/20220311/20220311_IMG_1.JPG) |
 | 20220309<br/>-基本上没问题了，但是蓝噪声抖动算法很大程度抑制了高频<br/>![image](./log/20220309/20220309_IMG_1.JPG)<br/>-尝试 ES133UT1 效果贼差...<br/>![image](./log/20220309/20220309_IMG_2.JPG) |
@@ -196,11 +203,3 @@ ALGO\Initialize_coe\DITHER\rgb2coe.m Matlab可以仿真FPGA处理的结果
 | 20210805<br/>- 重新绘制并且打样Z7-Lite测试ED097TC2的小板子。打样中，预计20210808到货<br/>- TPS65185模块重新打样到货。懒得焊接，元件可能不够 |
 | 20210804<br/>- 实现Verilog状态机读取EC11旋转编码器，效果还可以~<br/>焊接完TPS65185模块...没反应...<br/>- 焊接完Z7-Lite测试ED097TC2的小板子，发现对板接口弄反了以及把旋转编码器的B相误接到开发板的网口IC复位腿上 |
 | 20210721<br/>- 使用LCEDA画了一块Z7-Lite测试ED097TC2的小板子，并发送给捷配打样<br/>- 从一个大佬手里扣出了一块TPS65185的Eink电源模块PCB文件，源文件是AD格式由于我不太会用AD转换成LCEDA的格式，打样完成后元器件今天才到齐懒得焊接 |
-
-
-
-## 项目目标
-
-### 将输入的图像输出到任意尺寸任意信号(8bit/16bit)的Eink墨水屏[❌]
-
-clone不了请用 https://gitee.com/Hanley-Yao/Zynq7010_eink_controller
